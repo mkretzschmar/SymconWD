@@ -3,7 +3,9 @@
         "de": { 
             "System": "System",
             "Database": "Datenbank",
-            "Harddisk": "Festplatte"
+            "Harddisk": "Festplatte",
+            "Watchdog not evaluated." : "Watchdog nicht geprüft.",
+            "Watchdog successful evaluated." : "Watchdog erfolgreich geprüft."
         }
     }
 }
