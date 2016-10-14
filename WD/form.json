@@ -11,11 +11,11 @@
 		{ "type": "NumberSpinner", "name": "TresholdHDD",    "caption": "Threshold (MB)" },
 		
 		{ "type": "Label", "caption": "Database" },
-		{ "type": "CheckBox",          "name": "DatabaseWDActive", "caption": "Datenbank-Watchdog aktivieren"},
-		{ "type": "NumberSpinner",     "name": "TresholdDB",       "caption": "Threshold (MB)"},
+		{ "type": "CheckBox",          "name": "DatabaseWDActive",	"caption": "Datenbank-Watchdog aktivieren"},
+		{ "type": "NumberSpinner",     "name": "TresholdDB",		"caption": "Threshold (MB)"},
 		
-		{ "type": "ValidationTextBox", "name": "ConnectionString",     "caption": "ConnectionString" },
-		{ "type": "CheckBox",          "name": "Interval", "caption": "Interval"}
+		{ "type": "ValidationTextBox", "name": "ConnectionString",	"caption": "ConnectionString" },
+		{ "type": "NumberSpinner",     "name": "Interval",		"caption": "Interval"}
 		
   ],
 	"actions":
