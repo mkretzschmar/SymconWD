@@ -1,0 +1,24 @@
+{
+	"elements":
+	[
+		{ "type": "ValidationTextBox", "name": "InstanceID",     "caption": "Instance ID" },
+		{ "type": "CheckBox",          "name": "WDActive", "caption": "Watchdog aktivieren"},
+		
+    { "type": "Label", "caption": "System" },
+		{ "type": "CheckBox",          "name": "SystemWDActive", "caption": "System-Watchdog aktivieren"},
+		{ "type": "NumberSpinner", "name": "TresholdHDD",    "caption": "Grenzwert Festplattenspeicher" },
+		
+    { "type": "Label", "caption": "Database" },
+		{ "type": "CheckBox",          "name": "DatabaseWDActive", "caption": "Datenbank-Watchdog aktivieren"},
+		{ "type": "NumberSpinner",     "name": "TresholdDB",         "caption": "Grenzwert Datenbankspeicher"}
+  ],
+	"actions":
+	[
+		{ "type": "Button", "label": "Send", "onClick": "WD_SendState();" }
+	],
+    "status":
+    [
+        { "code": 101, "icon": "inactive", "caption": "Connection not evaluated." },
+        { "code": 102, "icon": "active", "caption": "Connection successful evaluated." }
+    ]
+}
