@@ -4,7 +4,6 @@
 		{ "type": "CheckBox",          "name": "WDActive", "caption": "Watchdog aktivieren"},
 		
 		{ "type": "ValidationTextBox", "name": "InstanceID",     "caption": "Instance ID" },
-		{ "type": "Button", "caption": "Test" },
 		{ "type": "CheckBox",          "name": "SetRootName", "caption": "Instanz-ID als Root-Kategorie-Bezeichner verwenden"},
 		
 		{ "type": "Label", "caption": "System" },
