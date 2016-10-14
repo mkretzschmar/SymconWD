@@ -16,7 +16,8 @@
   ],
 	"actions":
 	[
-		{ "type": "Button", "label": "Send", "onClick": "WD_SendState();" }
+		{ "type": "Button", "label": "AutoConfig", "onClick": "WD_AutoConfig();" };
+		{ "type": "Button", "label": "Test", "onClick": "WD_SendState();" }
 	],
     "status":
     [
