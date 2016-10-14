@@ -46,7 +46,7 @@ class IPSWatchdog extends IPSModule {
 	 *
 	 */
 	public function AutoConfig() {
-		echo "InstanceID: " . $this -> InstanceID;
+		echo "Instanz-ID: " . $this -> InstanceID. ", IPS Instanzname: " + this -> MyInstanceID;
 		$this -> SendRPC();
 	}
 	################## helper functions / wrapper
