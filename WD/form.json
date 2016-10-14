@@ -12,7 +12,11 @@
 		
 		{ "type": "Label", "caption": "Database" },
 		{ "type": "CheckBox",          "name": "DatabaseWDActive", "caption": "Datenbank-Watchdog aktivieren"},
-		{ "type": "NumberSpinner",     "name": "TresholdDB",       "caption": "Threshold (MB)"}
+		{ "type": "NumberSpinner",     "name": "TresholdDB",       "caption": "Threshold (MB)"},
+		
+		{ "type": "ValidationTextBox", "name": "ConnectionString",     "caption": "ConnectionString" },
+		{ "type": "CheckBox",          "name": "Interval", "caption": "Interval"},
+		
   ],
 	"actions":
 	[
