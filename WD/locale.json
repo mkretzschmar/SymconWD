@@ -1,6 +1,7 @@
 {
     "translations": {
-        "de": { 
+        "de": {
+            "Instance ID": "Instanz-ID",
             "System": "System",
             "Database": "Datenbank",
             "Harddisk": "Festplatte",
