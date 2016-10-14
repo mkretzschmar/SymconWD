@@ -15,10 +15,12 @@ class IPSWatchdog extends IPSModule {
 	public function Create() {
 		parent::Create();
 		$this -> RegisterPropertyString("InstanceID", gethostname());
-		$this -> RegisterPropertyString("BrokerURL", "iot.eclipse.org");
-		$this -> RegisterPropertyInteger("Port", 1883);
-		$this -> RegisterPropertyBoolean("CleanSession", true);
-
+		$this -> RegisterPropertyBoolean("SetRootName", true);
+		$this -> RegisterPropertyBoolean("WDActive", false);
+		$this -> RegisterPropertyBoolean("SystemWDActive", true);
+		$this -> RegisterPropertyInteger("TresholdHDD", 512);
+		$this -> RegisterPropertyBoolean("DatabaseWDActive", false);
+		$this -> RegisterPropertyInteger("TresholdDB", 512);
 	}
 	/**
 	 */
