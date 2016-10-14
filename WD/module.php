@@ -14,7 +14,7 @@ class IPSWatchdog extends IPSModule {
 	 */
 	public function Create() {
 		parent::Create();
-		$this -> RegisterPropertyString("InstanceID", gethostname());
+		$this -> RegisterPropertyString("MyInstanceID", gethostname());
 		$this -> RegisterPropertyBoolean("SetRootName", true);
 		$this -> RegisterPropertyBoolean("WDActive", false);
 		$this -> RegisterPropertyBoolean("SystemWDActive", true);
