@@ -1,0 +1,9 @@
+{
+    "translations": {
+        "de": { 
+            "System": "System",
+            "Database": "Datenbank",
+            "Harddisk": "Festplatte"
+        }
+    }
+}
