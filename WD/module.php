@@ -38,7 +38,7 @@ class IPSWatchdog extends IPSModule {
 	 *
 	 */
 	public function SendState() {
-		SendRPC();
+		$this -> SendRPC();
 	}
   
 	/**
