@@ -8,11 +8,11 @@
 		
 		{ "type": "Label", "caption": "System" },
 		{ "type": "CheckBox",          "name": "SystemWDActive", "caption": "System-Watchdog aktivieren"},
-		{ "type": "NumberSpinner", "name": "TresholdHDD",    "caption": "Grenzwert Festplattenspeicher" },
+		{ "type": "NumberSpinner", "name": "TresholdHDD",    "caption": "Threshold (MB)" },
 		
 		{ "type": "Label", "caption": "Database" },
 		{ "type": "CheckBox",          "name": "DatabaseWDActive", "caption": "Datenbank-Watchdog aktivieren"},
-		{ "type": "NumberSpinner",     "name": "TresholdDB",       "caption": "Grenzwert Datenbankspeicher"}
+		{ "type": "NumberSpinner",     "name": "TresholdDB",       "caption": "Threshold (MB)"}
   ],
 	"actions":
 	[
