@@ -21,7 +21,7 @@
 	],
     "status":
     [
-        { "code": 101, "icon": "inactive", "caption": "Connection not evaluated." },
-        { "code": 102, "icon": "active", "caption": "Connection successful evaluated." }
+        { "code": 101, "icon": "inactive", "caption": "Watchdog not evaluated." },
+        { "code": 102, "icon": "active", "caption": "Watchdog successful evaluated." }
     ]
 }
