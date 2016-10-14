@@ -3,12 +3,14 @@
  *
  */
 class IPSWatchdog extends IPSModule {
+	
 	/**
 	 *
 	 */
 	public function __construct($InstanceID) {
 		parent::__construct($InstanceID);
 	}
+	
 	/**
 	 *
 	 */
@@ -26,11 +28,11 @@ class IPSWatchdog extends IPSModule {
 	 */
 	public function ApplyChanges() {
 		parent::ApplyChanges();
-		// DO NOT EDIT OR DELETE THIS LINE!
+		
 	}
 	/**
 	 *
-	 * WD_SendState();
+	 * WD_SendState($id);
 	 *
 	 */
 	public function SendState() {
@@ -40,7 +42,7 @@ class IPSWatchdog extends IPSModule {
 	/**
 	 *
 	 *
-	 * WD_AutoConfig();
+	 * WD_AutoConfig($id);
 	 *
 	 */
 	public function AutoConfig() {
