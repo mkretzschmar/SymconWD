@@ -15,7 +15,7 @@
 		{ "type": "NumberSpinner",     "name": "TresholdDB",       "caption": "Threshold (MB)"},
 		
 		{ "type": "ValidationTextBox", "name": "ConnectionString",     "caption": "ConnectionString" },
-		{ "type": "CheckBox",          "name": "Interval", "caption": "Interval"},
+		{ "type": "CheckBox",          "name": "Interval", "caption": "Interval"}
 		
   ],
 	"actions":
