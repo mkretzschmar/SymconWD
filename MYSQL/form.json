@@ -6,6 +6,6 @@
 	],
 	"actions":
 	[ 
-		{ "type": "Label", "label": "Uhrzeit: ".date("d.m.y H:i") }
+		{ "type": "Label", "label": "TestLabel" }
 	] 
 }
