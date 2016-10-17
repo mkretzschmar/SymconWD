@@ -1,7 +1,7 @@
 {
 	"elements":
 	[
-		{ "type": "CheckBox",          "name": "WDActive", "caption": "Watchdog aktivieren"},
+		{ "type": "CheckBox",          "name": "WDActive", "caption": "GIIZ Watchdog Slave aktivieren"},
 		
 		{ "type": "ValidationTextBox", "name": "MyInstanceID",     "caption": "Instance ID" },
 		{ "type": "CheckBox",          "name": "SetRootName", "caption": "Instanz-ID als Root-Kategorie-Bezeichner verwenden"},
