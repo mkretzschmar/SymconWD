@@ -1,6 +1,6 @@
 <?
   // Klassendefinition
-  class MonitorMaster extends IPSModule {
+  class MonitoringMaster extends IPSModule {
  
     public function __construct($InstanceID) {
       parent::__construct($InstanceID);
@@ -15,10 +15,11 @@
     }
 
     /* 
-     * GIIZ_MonitorReport($id);
+     * GIIZ_CreateMonitoringReport($id);
      *
      */
-    public function MonitorReport() {
+    public function CreateMonitoringReport() {
+      
     }
   }
 ?>
