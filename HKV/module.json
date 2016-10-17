@@ -1,0 +1,14 @@
+{
+    "id": "{662a3936-5f35-436e-bc6d-f2734d59f037}",
+    "name": "GIIZHKVCollector",
+    "type": 3,
+    "vendor": "GIIZ",
+    "aliases":
+    [
+        "GIIZ HKV Datensammler"
+    ],  
+    "parentRequirements": [],
+    "childRequirements": [],
+    "implemented": [],
+    "prefix": "GIIZ"
+}
