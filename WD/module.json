@@ -3,7 +3,7 @@
 	"name": "GIIZWatchdogSlave",
 	"type": 0,
 	"vendor": "GIIZ",
-	"aliases": ["GIIZ Watchdog"],
+	"aliases": ["GIIZ Watchdog Slave"],
 	"parentRequirements": [],
 	"childRequirements": [],
 	"implemented": [],
