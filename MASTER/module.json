@@ -1,11 +1,11 @@
 {
     "id": "{245A4B06-80EB-40E0-B287-DA1F690D4C70}",
-    "name": "MonitoringMaster",
+    "name": "GIIZMonitoringMaster",
     "type": 0,
     "vendor": "GIIZ",
     "aliases": 
     [
-        "MonitoringMaster"
+        "GIIZ Monitoring Master"
     ],
     "parentRequirements": [],
     "childRequirements": [],
