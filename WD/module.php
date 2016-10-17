@@ -2,7 +2,7 @@
 /**
  *
  */
-class IPSWatchdog extends IPSModule {
+class GIIZWatchdogSlave extends IPSModule {
 	
 	/**
 	 *
