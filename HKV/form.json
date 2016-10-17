@@ -1,1 +1,6 @@
-{}
+{
+	"elements":
+	[
+		{ "name": "MonitorInstance", "type": "SelectInstance", "caption": "Monitor Instance" }
+	]
+}
