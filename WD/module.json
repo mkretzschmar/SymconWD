@@ -1,6 +1,6 @@
 {
 	"id": "{C285616F-5891-4E0A-9A5E-DE05B6218C0A}",
-	"name": "GIIZ Watchdog Slave",
+	"name": "GIIZWatchdogSlave",
 	"type": 0,
 	"vendor": "GIIZ",
 	"aliases": ["GIIZ Watchdog"],
