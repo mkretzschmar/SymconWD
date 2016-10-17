@@ -1,2 +1,2 @@
-# symconGIIZ
-Misc Helper for monitoring & maintenance of distributed IP-Symcon instances.
+# SymconGIIZ
+Misc utilities for monitoring & maintenance of distributed IP-Symcon instances.
