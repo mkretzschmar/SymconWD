@@ -1,11 +1,11 @@
 {
 	"id": "{C285616F-5891-4E0A-9A5E-DE05B6218C0A}",
-	"name": "IPSWatchdog",
+	"name": "GIIZ Watchdog Slave",
 	"type": 0,
-	"vendor": "SAMSOL",
-	"aliases": ["IPS Watchdog"],
+	"vendor": "GIIZ",
+	"aliases": ["GIIZ Watchdog"],
 	"parentRequirements": [],
 	"childRequirements": [],
 	"implemented": [],
-	"prefix": "WD"
+	"prefix": "GIIZ"
 }
