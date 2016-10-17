@@ -3,9 +3,9 @@
 	[
 		{ "name": "Username", "type": "ValidationTextBox", "caption": "Username" },
 		{ "name": "Password", "type": "PasswordTextBox", "caption": "Password" }
-	]
-  "actions":
-  [ 
-    { "type": "Label", "label": "Uhrzeit: '.date("d.m.y H:i").'" }
-  ] 
+	],
+	"actions":
+	[ 
+		{ "type": "Label", "label": "Uhrzeit: ".date("d.m.y H:i") }
+	] 
 }
