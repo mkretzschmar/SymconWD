@@ -1,6 +1,6 @@
 <?
   // Klassendefinition
-  class MonitoringMaster extends IPSModule {
+  class GIIZMonitoringMaster extends IPSModule {
  
     public function __construct($InstanceID) {
       parent::__construct($InstanceID);
