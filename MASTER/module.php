@@ -23,7 +23,7 @@
     }
     
     /* 
-     * GIIZ_Transmit($id);
+     * GIIZ_Transmit($id, $data);
      *
      */
     public function Transmit($data) {
