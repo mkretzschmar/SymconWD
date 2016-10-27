@@ -23,6 +23,14 @@
     }
     
     /* 
+     * GIIZ_Hello($id);
+     *
+     */
+    public function Hello() {
+        echo "Hello received".PHP_EOL;
+    }
+    
+    /* 
      * GIIZ_Transmit($id, $data);
      *
      */
