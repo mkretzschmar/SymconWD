@@ -21,5 +21,13 @@
     public function CreateMonitoringReport() {
       
     }
+    
+    /* 
+     * GIIZ_Transmit($id);
+     *
+     */
+    public function Transmit($data) {
+        echo "Received: ".$data.PHP_EOL;
+    }
   }
 ?>
