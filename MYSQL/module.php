@@ -1,4 +1,3 @@
-
 <?
   // Klassendefinition
   class GIIZMySQLConnector extends IPSModule {
@@ -19,14 +18,14 @@
         /**
          * GIIZ_ConnectDatabase($id);
          */
-        public function ConnectDatabase
+        public function ConnectDatabase() {
             // Selbsterstellter Code
         }
 
         /**
          * GIIZ_ConnectDatabase($id);
          */
-        public function DisconnectDatabase
+        public function DisconnectDatabase() {
             // Selbsterstellter Code
         }
     }
