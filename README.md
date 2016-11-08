@@ -11,4 +11,5 @@ INSTALL   | 4:Konfigurator| | BA6CEB07-26B4-4EEE-845D-10440DC3E70B | GIIZInstall
 MASTER	   | 0:Kern	| | 245A4B06-80EB-40E0-B287-DA1F690D4C70 | GIIZMonitoringMaster
 MYSQL	   | 1:I/O  | | DE20A8C7-F186-4509-A1ED-2467452B5534 | GIIZMySQLConnector
 WD	       | 0:Kern	| | C285616F-5891-4E0A-9A5E-DE05B6218C0A | GIIZWatchdogSlave
-PresenceSimulator | 3:Gerät | | 88D15C93-EDA8-4AF8-BCB4-81310F81766B | PresenceSimulator
+PresenceSimulator   | 3:Gerät | | 88D15C93-EDA8-4AF8-BCB4-81310F81766B | PresenceSimulator
+MetronaDatensammler | 3:Gerät | | 3D704922-660A-43D1-9145-539552DD4EC6 | MetronaDatensammler
