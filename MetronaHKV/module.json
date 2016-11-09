@@ -8,7 +8,7 @@
         "Metrona HKV"
     ],  
     "parentRequirements": [],
-    "childRequirements": [],
+    "childRequirements": ["{9469359F-EEA6-4DB0-930F-F08C3440DDB3}"],
     "implemented": [],
     "prefix": "GIIZ"
 }
