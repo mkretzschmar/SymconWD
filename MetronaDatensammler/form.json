@@ -12,7 +12,7 @@
     {
       "type": "Button",
       "label": "Add HKV",
-      "onClick": "MDS_AddHKV($id, $HKVID);"
+      "onClick": "MDS_AddHKV($id);"
     }
   ],
   "actions":
