@@ -1,0 +1,11 @@
+{
+	"id": "{55CBEC5D-4169-42DF-A8AD-2BF8951A2DC8}",
+	"name": "MetronaDatensammler",
+	"type": 3,
+	"vendor": "WHZ",
+	"aliases": ["Metrona Datensammler"],
+	"parentRequirements": ["{B87AC955-F258-468B-92FE-F4E0866A9E18}"],
+	"childRequirements": [],
+	"implemented": ["{66164EB8-3439-4599-B937-A365D7A68567}"],
+	"prefix": "MDS"
+}
