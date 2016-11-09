@@ -2,14 +2,24 @@
   "actions":
           [
             {
-              "name": "Text",
+              "name": "HKVID",
               "type": "ValidationTextBox",
-              "caption": "Text"
+              "caption": "HKVID"
+            },
+            {
+              "type": "Button",
+              "label": "Add HKV",
+              "onClick": "MDS_AddHKV($id, $HKVID);"
             },
             {
               "type": "Button",
               "label": "Config",
               "onClick": "MDS_AutoConfig($id);"
+            },
+            {
+              "name": "Text",
+              "type": "ValidationTextBox",
+              "caption": "Text"
             },
             {
               "type": "Button",
