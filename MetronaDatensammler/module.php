@@ -59,7 +59,7 @@ class MetronaDatensammler extends IPSModule {
    */
   public function AddHKV($hkvid) {
     echo "Neuer HKV wird angelegt...";
-    $InsID = IPS_CreateInstance("{6FE43522-7204-4686-A63F-653B4D93D6D6}");
+    $InsID = IPS_CreateInstance("{9469359F-EEA6-4DB0-930F-F08C3440DDB3}");
     IPS_SetName($InsID, "HKV " + $hkvid); // Instanz benennen
     $CatIdHKV = @IPS_GetCategoryIDByName("Heizkostenverteiler", $this->InstanceID);
     IPS_SetParent($InsID, $CatIdHKV);
