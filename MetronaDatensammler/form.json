@@ -1,4 +1,11 @@
 {
+  "elements": [
+    {
+      "name": "Active",
+      "type": "CheckBox",
+      "caption": "Aktiviert"
+    }
+  ],
   "actions":
           [{
               "name": "HKVID",
