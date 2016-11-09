@@ -1,5 +1,5 @@
 {
-  "elements":
+  "actions":
           [{
               "name": "HKVID",
               "type": "ValidationTextBox",
@@ -9,11 +9,7 @@
               "type": "Button",
               "label": "Add HKV",
               "onClick": "MDS_AddHKV($id, $HKVID);"
-            }
-          ],
-  "actions":
-          [
-
+            },
             {
               "type": "Button",
               "label": "Config",
