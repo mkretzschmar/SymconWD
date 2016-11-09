@@ -77,12 +77,30 @@ class MetronaDatensammler extends IPSModule {
   }
 
   /**
+   * 
    */
   public function ReceiveData($JSONString) {
     $data = json_decode($JSONString);
     IPS_LogMessage("Datensammler", utf8_decode($data->Buffer));
     //Parse and write values to our variables
-    echo "received: " . $JSONString;
+    $this->parseMessage(utf8_decode($data->Buffer));
+  }
+ 
+  
+  /**
+   * 
+   */
+  private function parseMessage($hkvmessage) {
+    // Validierung
+    
+    // Ermitteln der HKVID
+    
+    // Anlegen einer neuen HKV-Instanz, wenn noch nicht vorhanden
+    
+    // Zuweisen der Werte (Variablen) der HKV-Instanz
+    
+    // Wenn aktiviert: Forward der Nachricht an konfigurierbare 
+    
   }
 
 }

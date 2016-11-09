@@ -8,6 +8,11 @@
             },
             {
               "type": "Button",
+              "label": "Config",
+              "onClick": "MDS_AutoConfig($id);"
+            },
+            {
+              "type": "Button",
               "label": "Send",
               "onClick": "MDS_Send($id, $Text);"
             }
