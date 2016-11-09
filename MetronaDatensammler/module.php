@@ -47,7 +47,8 @@ class MetronaDatensammler extends IPSModule {
   public function AutoConfig() {
     // 1. Category 'Heizkostenverteiler',
     //  each HKV will be represented by an Object of type "device"
-    $CatIdHKV = @IPS_GetCategoryIDByName("Heizkostenverteiler", $this->InstanceID);
+    //$CatIdHKV = @IPS_GetCategoryIDByName("Heizkostenverteiler", $this->InstanceID);
+    $CatIdHKV = @IPS_GetCategoryIDByName("Heizkostenverteiler", 0);
     if ($CatIdHKV === false) {
       echo "Kategorie 'Heizkostenverteiler' nicht gefunden, wird angelegt...";
       $CatIdHKV = IPS_CreateCategory();

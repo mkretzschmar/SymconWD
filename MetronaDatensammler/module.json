@@ -1,7 +1,7 @@
 {
 	"id": "{3D704922-660A-43D1-9145-539552DD4EC6}",
 	"name": "MetronaDatensammler",
-	"type": 3,
+	"type": 2,
 	"vendor": "GIIZ",
 	"aliases": ["Metrona Datensammler"],
 	"parentRequirements": ["{B87AC955-F258-468B-92FE-F4E0866A9E18}"],
