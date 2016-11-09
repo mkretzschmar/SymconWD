@@ -11,7 +11,7 @@ class MetronaHKV extends IPSModule {
   public function Create() {
     parent::Create();
 
-    $this->RegisterPropertyString("ReceiveFilter", "1B99*");
+    //$this->RegisterPropertyString("ReceiveFilter", "1B99*");
   }
 
   /**
@@ -20,8 +20,10 @@ class MetronaHKV extends IPSModule {
   public function ApplyChanges() {
     parent::ApplyChanges();
 
-    //Connect to available splitter or create a new one
-    $this->ConnectParent("{6179ED6A-FC31-413C-BB8E-1204150CF376}");
+    //Connect to available splitter (Datensammler) or create a new one
+    //$this->ConnectParent("{6179ED6A-FC31-413C-BB8E-1204150CF376}");
+    
+    $this->ConnectParent("{3D704922-660A-43D1-9145-539552DD4EC6}");
 
     //Apply filter
     $this->SetReceiveDataFilter($this->ReadPropertyString("ReceiveFilter"));

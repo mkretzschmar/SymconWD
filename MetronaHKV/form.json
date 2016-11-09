@@ -4,8 +4,9 @@
             {
               "name": "MonitorInstance",
               "type": "SelectInstance",
-              "caption": "Monitor Instance"
-            },{
+              "caption": "Zielvariable"
+            },
+            {
               "name": "Text",
               "type": "ValidationTextBox",
               "caption": "Text"
