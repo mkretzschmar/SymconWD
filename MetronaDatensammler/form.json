@@ -4,20 +4,19 @@
       "name": "Active",
       "type": "CheckBox",
       "caption": "Aktiviert"
+    }, {
+      "name": "HKVID",
+      "type": "ValidationTextBox",
+      "caption": "HKVID"
+    },
+    {
+      "type": "Button",
+      "label": "Add HKV",
+      "onClick": "MDS_AddHKV($id, $HKVID);"
     }
   ],
   "actions":
           [{
-              "name": "HKVID",
-              "type": "ValidationTextBox",
-              "caption": "HKVID"
-            },
-            {
-              "type": "Button",
-              "label": "Add HKV",
-              "onClick": "MDS_AddHKV($id, $HKVID);"
-            },
-            {
               "type": "Button",
               "label": "Config",
               "onClick": "MDS_AutoConfig($id);"
