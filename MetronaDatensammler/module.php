@@ -30,18 +30,18 @@ class MetronaDatensammler extends IPSModule {
 
   /**
    *
-   * CC7_RequestState($id);
+   * MDS_RequestState($id);
    *
    */
   public function RequestState() {
-    echo "Requesting CC7 State...";
+    echo "Requesting MDS State...";
   }
 
   /**
    * MDS_AutoConfig($id); 
    */
   public function AutoConfig() {
-    // 1. Cateory 'Heizkostenverteiler',
+    // 1. Category 'Heizkostenverteiler',
     //  each HKV will be represented by an Object of type "device"
     $CatIdHKV = @IPS_GetCategoryIDByName("Heizkostenverteiler", $this->InstanceID);
     if ($CatIdHKV === false) {

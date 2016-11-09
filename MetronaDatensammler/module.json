@@ -5,7 +5,7 @@
 	"vendor": "WHZ",
 	"aliases": ["Metrona Datensammler"],
 	"parentRequirements": ["{B87AC955-F258-468B-92FE-F4E0866A9E18}"],
-	"childRequirements": [],
+	"childRequirements": ["{9469359F-EEA6-4DB0-930F-F08C3440DDB3}"],
 	"implemented": ["{66164EB8-3439-4599-B937-A365D7A68567}"],
 	"prefix": "MDS"
 }
