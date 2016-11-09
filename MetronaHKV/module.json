@@ -1,0 +1,14 @@
+{
+    "id": "{9469359F-EEA6-4DB0-930F-F08C3440DDB3}",
+    "name": "MetronaHKV",
+    "type": 3,
+    "vendor": "GIIZ",
+    "aliases":
+    [
+        "Metrona HKV"
+    ],  
+    "parentRequirements": [],
+    "childRequirements": [],
+    "implemented": [],
+    "prefix": "GIIZ"
+}

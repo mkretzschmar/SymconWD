@@ -1,0 +1,27 @@
+{
+  "elements":
+          [
+            {
+              "name": "MonitorInstance",
+              "type": "SelectInstance",
+              "caption": "Monitor Instance"
+            },{
+              "name": "Text",
+              "type": "ValidationTextBox",
+              "caption": "Text"
+            }
+          ],
+  "actions":
+          [
+            {
+              "type": "Button",
+              "label": "Metadaten laden",
+              "onClick": "HKV_LoadMetadata($id);"
+            },
+            {
+              "type": "Button",
+              "label": "Statistik anzeigen",
+              "onClick": "HKV_ShowStats($id);"
+            }
+          ]
+}
