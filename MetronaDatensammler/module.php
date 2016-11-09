@@ -17,6 +17,9 @@ class MetronaDatensammler extends IPSModule {
    */
   public function Create() {
     parent::Create();
+    
+    $this -> RegisterPropertyString("HKVID", "123456");
+		
   }
 
   /**
