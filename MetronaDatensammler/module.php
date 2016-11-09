@@ -1,5 +1,5 @@
 <?php
-
+define("BASE_CATEGORY_NAME", "Heizkostenverteiler");
 /**
  *
  */
@@ -48,21 +48,21 @@ class MetronaDatensammler extends IPSModule {
     // 1. Category 'Heizkostenverteiler',
     //  each HKV will be represented by an Object of type "device"
     //$CatIdHKV = @IPS_GetCategoryIDByName("Heizkostenverteiler", $this->InstanceID);
-    $CatIdHKV = @IPS_GetCategoryIDByName("Heizkostenverteiler", $parentId);
+    $CatIdHKV = @IPS_GetCategoryIDByName(BASE_CATEGORY_NAME, $parentId);
     if ($CatIdHKV === false) {
-      echo "Kategorie 'Heizkostenverteiler' nicht gefunden, wird angelegt...";
+      echo "Kategorie '".BASE_CATEGORY_NAME."' nicht gefunden, wird angelegt...";
       $CatIdHKV = IPS_CreateCategory();
-      IPS_SetName($CatIdHKV, "Heizkostenverteiler");
+      IPS_SetName($CatIdHKV, BASE_CATEGORY_NAME);
       IPS_SetParent($CatIdHKV, $parentId);
     } else {
-      echo "Kategorie 'Heizkostenverteiler' bereits vorhanden: " . $CatIdHKV;
+      echo "Kategorie '".BASE_CATEGORY_NAME."' bereits vorhanden: " . $CatIdHKV;
     }
   }
 
   /**
-   * MDS_AddHKV($id, $hkvid); 
+   * MDS_AddHKV($id); 
    */
-  public function AddHKV($hkvid) {
+  public function AddHKV() {
     echo "Neuer HKV wird angelegt...";
     $parentId = 0; // $this->InstanceID
     $InsID = IPS_CreateInstance("{9469359F-EEA6-4DB0-930F-F08C3440DDB3}");
