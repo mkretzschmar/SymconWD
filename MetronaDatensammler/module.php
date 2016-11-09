@@ -17,10 +17,9 @@ class MetronaDatensammler extends IPSModule {
    */
   public function Create() {
     parent::Create();
-    
-    $this -> RegisterPropertyString("HKVID", "123456");
-  $this -> RegisterPropertyBoolean("Active", false);
-		
+
+    $this->RegisterPropertyString("HKVID", "123456");
+    $this->RegisterPropertyBoolean("Active", false);
   }
 
   /**
@@ -67,7 +66,7 @@ class MetronaDatensammler extends IPSModule {
     echo "Neuer HKV wird angelegt...";
     $parentId = 0; // $this->InstanceID
     $InsID = IPS_CreateInstance("{9469359F-EEA6-4DB0-930F-F08C3440DDB3}");
-    IPS_SetName($InsID, "HKV ".$hkvid);
+    IPS_SetName($InsID, "HKV " . $this->ReadPropertyString("HKVID"));
     $CatIdHKV = @IPS_GetCategoryIDByName("Heizkostenverteiler", $parentId);
     IPS_SetParent($InsID, $CatIdHKV);
   }
@@ -92,22 +91,16 @@ class MetronaDatensammler extends IPSModule {
     //Parse and write values to our variables
     $this->parseMessage(utf8_decode($data->Buffer));
   }
- 
-  
+
   /**
    * 
    */
   private function parseMessage($hkvmessage) {
     // Validierung
-    
     // Ermitteln der HKVID
-    
     // Anlegen einer neuen HKV-Instanz, wenn noch nicht vorhanden
-    
     // Zuweisen der Werte (Variablen) der HKV-Instanz
-    
     // Wenn aktiviert: Forward der Nachricht an konfigurierbare 
-    
   }
 
 }
