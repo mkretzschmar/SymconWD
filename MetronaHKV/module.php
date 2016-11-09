@@ -1,13 +1,22 @@
 <?php
 
+/**
+ * 
+ */
 class MetronaHKV extends IPSModule {
 
+  /**
+   * 
+   */
   public function Create() {
     parent::Create();
 
     $this->RegisterPropertyString("ReceiveFilter", "1B99*");
   }
 
+  /**
+   * 
+   */
   public function ApplyChanges() {
     parent::ApplyChanges();
 
@@ -18,12 +27,29 @@ class MetronaHKV extends IPSModule {
     $this->SetReceiveDataFilter($this->ReadPropertyString("ReceiveFilter"));
   }
 
+  /**
+   * HKV_ReceiveData($id, $JSONString); 
+   */
   public function ReceiveData($JSONString) {
     $data = json_decode($JSONString);
     //Parse and write values to our buffer
     $this->SetBuffer("hkvmessage", utf8_decode($data->Buffer));
     //Print buffer
     IPS_LogMessage("MetronaHKV", $this->GetBuffer("hkvmessage"));
+  }
+
+  /**
+   * HKV_LoadMetadata($id); 
+   */
+  public function LoadMetadata() {
+    echo "Lade Metadaten für HKV aus Datenbank ";
+  }
+  
+  /**
+   * HKV_ShowStats($id); 
+   */
+  public function ShowStats() {
+    echo "Statistik für HKV: ";
   }
 
 }
