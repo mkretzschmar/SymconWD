@@ -23,17 +23,32 @@
             // Diese Zeile nicht löschen
             parent::ApplyChanges();
         }
- 
+        
         /**
-        * Die folgenden Funktionen stehen automatisch zur Verfügung, wenn das Modul über die "Module Control" eingefügt wurden.
-        * Die Funktionen werden, mit dem selbst eingerichteten Prefix, in PHP und JSON-RPC wiefolgt zur Verfügung gestellt:
-        *
-        * GIIZ_Install($id);
-        *
-        */
+         * GIIZ_GetConfigurationForm($id);
+         */
+        public function GetConfigurationForm()
+		{
+			
+			return '{ "actions": [ { "type": "Label", "label": "The current time is '.date("d.m.y H:i").'" } ] }';
+		
+		}
+    
+        /**
+         *
+         * GIIZ_Install($id);
+         *
+         */
+        public function GetVersion() {
+            echo "0";
+        }
+        /**
+         *
+         * GIIZ_Install($id);
+         *
+         */
         public function Install() {
-            // Selbsterstellter Code
-            echo "Installer Version 0";
+            echo "Installer wird ausgeführt...";
         }
     }
 ?>
