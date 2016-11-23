@@ -1,6 +1,9 @@
 # SymconGIIZ
 Misc utilities for monitoring & maintenance of distributed IP-Symcon instances.
 
+Bibliothek | GUID
+-----------|--------------------------------------
+SymconGIIZ | fababece-91ed-11e6-ae22-56b6b6499611
 
 Modulname | Typ | Beschreibung | GUID | Name
 ----------|-----|--------------|------|--------------------
