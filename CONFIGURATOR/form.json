@@ -2,6 +2,9 @@
 	"elements":
 	[
 		{ "name": "Username", "type": "ValidationTextBox", "caption": "Username" },
-		{ "name": "Password", "type": "PasswordTextBox", "caption": "Password" }
+		{ "name": "Password", "type": "PasswordTextBox", "caption": "Password" },
+		{ "type": "CheckBox", "name": "1", "caption": "Vorlauf" },
+		{ "type": "CheckBox", "name": "2", "caption": "Rücklauf" },
+		{ "type": "CheckBox", "name": "3", "caption": "Volumen" }
 	]
 }
