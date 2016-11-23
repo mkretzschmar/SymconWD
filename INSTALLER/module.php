@@ -15,7 +15,7 @@ class GIIZInstaller extends IPSModule {
     }
         
     /**
-     * GIIZ_GetConfigurationForm($id);
+     * INST_GetConfigurationForm($id);
      */
     public function GetConfigurationForm() {
 		return '{ "actions": [ { "type": "Label", "label": "The current time is '.date("d.m.y H:i").'" } ] }';
@@ -23,7 +23,7 @@ class GIIZInstaller extends IPSModule {
     
     /**
      *
-     * GIIZ_Install($id);
+     * INST_GetVersion($id);
      *
      */
     public function GetVersion() {
@@ -32,7 +32,7 @@ class GIIZInstaller extends IPSModule {
     
     /**
      *
-     * GIIZ_Install($id);
+     * INST_Install($id);
      *
      */
     public function Install() {
