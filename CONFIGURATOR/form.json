@@ -10,6 +10,6 @@
 	"actions": 	[
 	    { "type": "Button", "label": "AutoConfig", "onClick": "GIIZ_AutoConfig($id);" },
 	    { "type": "ValidationTextBox", "name": "command", "caption": "Konfigurationsbefehl" },
-	    { "type": "Button", "label": "Send", "onClick": "GIIZ_ConfigCommand($id, $cmd);" }
+	    { "type": "Button", "label": "Send", "onClick": "GIIZ_ConfigCommand($id, \"HELLO\");" }
 	]
 }
