@@ -1,11 +1,11 @@
 {
-    "id": "{BA6CEB07-26B4-4EEE-845D-10440DC3E70B}",
-    "name": "GIIZAutoconfig",
+    "id": "{603DB2B9-B619-4342-B442-64852CEFA5D3}",
+    "name": "GIIZConfigurator",
     "type": 3,
     "vendor": "GIIZ",
     "aliases":
     [
-        "GIIZ Autoconfig"
+        "GIIZ Configurator"
     ],  
     "parentRequirements": [],
     "childRequirements": [],
