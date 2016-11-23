@@ -25,9 +25,9 @@
         }
         
         /**
-         * GCFG_ConfigCommand($cmd); 
+         * GCFG_ConfigCommand($id, $cmd); 
          */
-        public function ConfigCommand($id, $cmd) {
+        public function ConfigCommand($cmd) {
             echo "Führe Befehl aus: ".$cmd."\n";
         }
     }
