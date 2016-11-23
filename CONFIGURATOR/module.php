@@ -17,7 +17,7 @@
  
         /**
          *
-         * GIIZ_Autoconfig($id);
+         * GCFG_Autoconfig($id);
          *
          */
         public function Autoconfig() {
@@ -25,7 +25,7 @@
         }
         
         /**
-         * GIIZ_ConfigCommand($cmd); 
+         * GCFG_ConfigCommand($cmd); 
          */
         public function ConfigCommand($cmd) {
             echo "Führe Befehl aus: ".$cmd."\n";
