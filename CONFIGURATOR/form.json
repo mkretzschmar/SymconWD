@@ -6,5 +6,10 @@
 		{ "type": "CheckBox", "name": "1", "caption": "Vorlauf" },
 		{ "type": "CheckBox", "name": "2", "caption": "Rücklauf" },
 		{ "type": "CheckBox", "name": "3", "caption": "Volumen" }
+	],
+	"actions": 	[
+	    { "type": "Button", "label": "AutoConfig", "onClick": "GIIZ_AutoConfig($id);" },
+	    { "type": "ValidationTextBox", "name": "command", "caption": "Konfigurationsbefehl" },
+	    { "type": "Button", "label": "Send", "onClick": "GIIZ_ConfigCommand($id, $cmd);" }
 	]
 }
