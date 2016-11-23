@@ -1,9 +1,11 @@
 # SymconGIIZ
 Misc utilities for monitoring & maintenance of distributed IP-Symcon instances.
 
-Bibliothek | GUID
------------|--------------------------------------
-SymconGIIZ | fababece-91ed-11e6-ae22-56b6b6499611
+
+
+Bibliothek | GUID                                 | URL
+-----------|--------------------------------------|-----
+SymconGIIZ | fababece-91ed-11e6-ae22-56b6b6499611 | http://whz-aiis-vm14.zw.fh-zwickau.de/giiz/SymconGIIZ.git
 
 Modulname | Typ | Beschreibung | GUID | Name
 ----------|-----|--------------|------|--------------------
