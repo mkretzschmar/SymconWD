@@ -8,8 +8,9 @@
 		{ "type": "CheckBox", "name": "3", "caption": "Volumen" }
 	],
 	"actions": 	[
-	    { "type": "Button", "label": "AutoConfig", "onClick": "GIIZ_AutoConfig($id);" },
+	    { "type": "Button", "label": "AutoConfig", "onClick": "GCFG_AutoConfig($id);" },
+	    { "type": "Label", "name": "lbl", "caption": " " },
 	    { "type": "ValidationTextBox", "name": "command", "caption": "Konfigurationsbefehl" },
-	    { "type": "Button", "label": "Send", "onClick": "GIIZ_ConfigCommand($id, \"HELLO\");" }
+	    { "type": "Button", "label": "Send", "onClick": "GCFG_ConfigCommand($id, \"HELLO\");" }
 	]
 }
