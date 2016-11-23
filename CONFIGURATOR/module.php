@@ -25,7 +25,7 @@
         }
         
         /**
-         * GIIZ_ConfigCommand($id, $cmd); 
+         * GIIZ_ConfigCommand($cmd); 
          */
         public function ConfigCommand($cmd) {
             echo "Führe Befehl aus: ".$cmd."\n";
