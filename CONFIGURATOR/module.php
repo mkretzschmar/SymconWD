@@ -23,5 +23,12 @@
         public function Autoconfig() {
             echo "Autoconfig not implemented yet...\n\n(Sorry, better luck next time)";
         }
+        
+        /**
+         * GIIZ_ConfigCommand($id, $cmd); 
+         */
+        public function ConfigCommand($cmd) {
+            echo "Führe Befehl aus: ".$cmd."\n";
+        }
     }
 ?>
