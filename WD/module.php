@@ -34,7 +34,7 @@ class GIIZWatchdogSlave extends IPSModule {
 	}
 	/**
 	 *
-	 * WD_SendState($id);
+	 * GWD_SendState($id);
 	 *
 	 */
 	public function SendState() {
@@ -44,7 +44,7 @@ class GIIZWatchdogSlave extends IPSModule {
 	/**
 	 *
 	 *
-	 * WD_AutoConfig($id);
+	 * GWD_AutoConfig($id);
 	 *
 	 */
 	public function AutoConfig() {
