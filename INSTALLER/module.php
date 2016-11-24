@@ -29,6 +29,8 @@ class GIIZInstaller extends IPSModule {
         "actions": 
             [
                 { "type": "Label", "label": "Letzte Aktualisierung '.date("d.m.y H:i").'" },
+                { "type": "Label", "label": " " },
+                { "type": "Label", "label": "Verfügbare Module:" },
                 ';
         foreach($modules as $modul => $caption) {
             $form = $form.'{ "type": "CheckBox", "name": "'.$modul.'", "caption": "'.$modul.'" },';
