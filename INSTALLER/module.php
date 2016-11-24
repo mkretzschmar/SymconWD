@@ -111,7 +111,7 @@ class GIIZInstaller extends IPSModule {
    */
   private function InstallMetronaHKV() {
     echo "Installiere Metrona HKV-Umgebung (TODO: Konfigurator)";
-    MDS_AutoConfig();
+    MDS_AutoConfig(0);
   }
 
 }
