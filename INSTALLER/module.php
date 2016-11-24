@@ -1,4 +1,4 @@
-<?
+<?php
 // Klassendefinition
 class GIIZInstaller extends IPSModule {
 
@@ -33,7 +33,8 @@ class GIIZInstaller extends IPSModule {
                 { "type": "Label", "label": "Verfügbare Module:" },
                 ';
         foreach($modules as $modul => $caption) {
-            $form = $form.'{ "type": "CheckBox", "name": "'.$modul.'", "caption": "'.$modul.'" },';
+            $this->RegisterPropertyBoolean($modul, false);
+            $form = $form.'{ "type": "CheckBox", "name": "'.$modul.'", "caption": "'.$caption.'" },';
         }
         
         $form = $form.'
