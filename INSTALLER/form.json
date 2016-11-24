@@ -1,6 +1,1 @@
-{
-	"actions":
-	[
-		{ "type": "Button", "label": "Installieren", "onClick": "GIIZ_Install();" },
-	]
-}
+{}
