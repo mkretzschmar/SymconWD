@@ -10,7 +10,7 @@
 	"actions": 	[
 	    { "type": "Button", "label": "AutoConfig", "onClick": "GCFG_AutoConfig($id);" },
 	    { "type": "Label", "name": "lbl", "caption": " " },
-	    { "type": "ValidationTextBox", "name": "command", "caption": "Konfigurationsbefehl" },
-	    { "type": "Button", "label": "Send", "onClick": "GCFG_ConfigCommand($id, \"HELLO\");" }
+	    { "type": "ValidationTextBox", "name": "Command", "caption": "Konfigurationsbefehl" },
+	    { "type": "Button", "label": "Send", "onClick": "GCFG_ConfigCommand($id, $Command);" }
 	]
 }
