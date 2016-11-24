@@ -35,7 +35,7 @@ class GIIZInstaller extends IPSModule {
         }
         
         $form = $form.'
-                { "type": "Button", "label": "'.$lblText.'", "onClick": "INST_Install($id);" }
+                { "type": "Button", "label": "'.$lblText.'", "onClick": "INST_Install($id)," }
             ] }
         
         ';
