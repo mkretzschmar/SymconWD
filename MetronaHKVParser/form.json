@@ -1,0 +1,15 @@
+{
+  "actions":
+          [
+            {
+              "name": "Msg",
+              "type": "ValidationTextBox",
+              "caption": "HKV-Nachricht"
+            },
+            {
+              "type": "Button",
+              "label": "Parse",
+              "onClick": "HKVP_ParseMessage($id, $Msg);"
+            }
+          ]
+}
