@@ -84,7 +84,7 @@ class GIIZInstaller extends IPSModule {
     if ($this->ReadPropertyBoolean("HKV")) {
       echo "Installiere HKVs...";
       $this->SetSummary("Installiere HKVs...");
-      InstallMetronaHKV();
+      $this->InstallMetronaHKV();
     }
   }
 
