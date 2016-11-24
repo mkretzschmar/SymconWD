@@ -27,7 +27,7 @@ class GIIZInstaller extends IPSModule {
         "actions": 
             [
                 { "type": "Label", "label": "Letzte Aktualisierung '.date("d.m.y H:i").'" },
-                { "type": "Button", "label": "'.$lblText.'", "onClick": "INST_Install($id, "'.$lblText.'");" }
+                { "type": "Button", "label": "'.$lblText.'", "onClick": "INST_Install($id);" }
             ] }
         
         ';
@@ -47,8 +47,8 @@ class GIIZInstaller extends IPSModule {
      * INST_Install($id, $mode);
      *
      */
-    public function Install($mode) {
-        echo "Installer wird ausgeführt, '".$mode."'-Modus.";
+    public function Install() {
+        echo "Installer wird ausgeführt...";
     }
 }
 
