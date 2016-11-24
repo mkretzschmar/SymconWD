@@ -1,4 +1,4 @@
-<?
+<?php
     class GIIZConfigurator extends IPSModule {
  
         public function __construct($InstanceID) {
@@ -29,6 +29,7 @@
          */
         public function ConfigCommand($cmd) {
             echo "Führe Befehl aus: ".$cmd."\n";
+            echo IPS_Execute($cmd, "", false, false);
         }
     }
 ?>
