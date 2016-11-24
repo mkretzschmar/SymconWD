@@ -79,6 +79,8 @@ class GIIZInstaller extends IPSModule {
   public function Install() {
     echo "Installer wird ausgeführt...\nHKV: " . $this->ReadPropertyBoolean("HKV") . "";
     if ($this->ReadPropertyBoolean("HKV")) {
+      echo "Installiere HKVs...";
+      $this->SetSummary("Installiere HKVs...");
       InstallMetronaHKV();
     }
   }
