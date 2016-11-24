@@ -22,7 +22,7 @@ class GIIZInstaller extends IPSModule {
         $isInstalled = false;
         $lblText = $isInstalled ? "Aktualisieren" : "Installieren";
         
-        $modules = array("Watchdog", "HKV", "Bla");
+        $modules = array("Watchdog" => "GIIZ Watchdog", "HKV" => "Metrona HKV Datensammler", "Bla" => "Bla");
         $form = '
         { 
         
@@ -30,8 +30,8 @@ class GIIZInstaller extends IPSModule {
             [
                 { "type": "Label", "label": "Letzte Aktualisierung '.date("d.m.y H:i").'" },
                 ';
-        foreach($modules as $modul ) {
-            $form = $form.'{ "type": "Button", "label": "'.$modul.'", "onClick": "INST_Install($id);" },';
+        foreach($modules as $modul => $caption) {
+            $form = $form.'{ "type": "CheckBox", "name": "'.$modul.'", "caption": "'.$modul.'" },';
         }
         
         $form = $form.'
