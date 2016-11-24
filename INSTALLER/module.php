@@ -3,7 +3,7 @@
 // Klassendefinition
 class GIIZInstaller extends IPSModule {
 
-  var $modules = array("Watchdog" => "GIIZ Watchdog", "HKV" => "Metrona HKV Datensammler", "Bla" => "Bla");
+  static $MODULES = array("Watchdog" => "GIIZ Watchdog", "HKV" => "Metrona HKV Datensammler", "Bla" => "Bla");
 
   /**
    * ---------------------------------------------------------------------------
@@ -18,7 +18,7 @@ class GIIZInstaller extends IPSModule {
    */
   public function Create() {
     parent::Create();
-    foreach ($this->$modules as $modul => $caption) {
+    foreach (GIIZInstaller::$MODULES as $modul => $caption) {
       $this->RegisterPropertyBoolean($modul, false);
     }
   }
@@ -48,7 +48,7 @@ class GIIZInstaller extends IPSModule {
                 { "type": "Label", "label": " " },
                 { "type": "Label", "label": "Verfügbare Module:" },
                 ';
-    foreach ($this->$modules as $modul => $caption) {
+    foreach (GIIZInstaller::$MODULES as $modul => $caption) {
       $form = $form . '{ "type": "CheckBox", "name": "' . $modul . '", "caption": "' . $caption . '" },';
     }
 
