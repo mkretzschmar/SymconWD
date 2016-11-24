@@ -1,0 +1,34 @@
+{
+  "elements":
+          [
+            {
+              "name": "HKVInstance",
+              "type": "SelectInstance",
+              "caption": "HKV"
+            },
+            {
+              "name": "AddHKV",
+              "type": "Button",
+              "label": "Hinzufügen",
+              "onClick": "HKVR_AddHKV($id, $HKVInstance);"
+            }
+          ],
+  "actions":
+          [
+            {
+              "type": "Button",
+              "label": "Metadaten laden",
+              "onClick": "HKVR_LoadMetadata($id);"
+            },
+            {
+              "type": "Button",
+              "label": "Report erzeugen",
+              "onClick": "HKV_ShowStats($id);"
+            },
+            {
+              "type": "Button",
+              "label": "Statistik anzeigen",
+              "onClick": "HKV_ShowStats($id);"
+            }
+          ]
+}
