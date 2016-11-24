@@ -35,7 +35,8 @@ class GIIZInstaller extends IPSModule {
         }
         
         $form = $form.'
-                { "type": "Button", "label": "'.$lblText.'", "onClick": "INST_Install($id);" }
+                { "type": "Button", "label": "'.$lblText.'", "onClick": "INST_Install($id);" },
+                { "type": "Button", "label": "Erzeuge AutoInstaller-Datei", "onClick": "INST_GenerateAutoInstall($id);" }
             ] }
         
         ';
@@ -59,6 +60,16 @@ class GIIZInstaller extends IPSModule {
      */
     public function Install() {
         echo "Installer wird ausgeführt...";
+    }
+    
+    /**
+     *
+     * INST_GenerateAutoInstall($id);
+     *
+     */
+    public function GenerateAutoInstall() {
+        echo "AutoInstaller wird generiert... \n TODO: Implement";
+        
     }
 }
 
