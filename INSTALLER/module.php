@@ -42,7 +42,7 @@ class GIIZInstaller extends IPSModule {
     $form = '
         { 
         
-        "actions": 
+        "elements": 
             [
                 { "type": "Label", "label": "Letzte Aktualisierung ' . date("d.m.y H:i") . '" },
                 { "type": "Label", "label": " " },
@@ -53,6 +53,9 @@ class GIIZInstaller extends IPSModule {
     }
 
     $form = $form . '
+            ],
+        "actions":
+            [
                 { "type": "Button", "label": "' . $lblText . '", "onClick": "INST_Install($id);" },
                 { "type": "Button", "label": "Erzeuge AutoInstaller-Datei", "onClick": "INST_GenerateAutoInstall($id);" }
             ] }
