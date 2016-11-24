@@ -1,0 +1,14 @@
+{
+    "id": "{603DB2B9-B619-4342-B442-64852CEFA5D3}",
+    "name": "GIIZConfigurator",
+    "type": 3,
+    "vendor": "GIIZ",
+    "aliases":
+    [
+        "GIIZ Configurator"
+    ],  
+    "parentRequirements": [],
+    "childRequirements": [],
+    "implemented": [],
+    "prefix": "GCFG"
+}

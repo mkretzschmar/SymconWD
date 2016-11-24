@@ -1,5 +1,5 @@
 <?
-    class GIIZAutoconfig extends IPSModule {
+    class GIIZConfigurator extends IPSModule {
  
         public function __construct($InstanceID) {
             parent::__construct($InstanceID);
@@ -17,11 +17,18 @@
  
         /**
          *
-         * GIIZ_Autoconfig($id);
+         * GCFG_Autoconfig($id);
          *
          */
         public function Autoconfig() {
-            echo "OK";
+            echo "Autoconfig not implemented yet...\n\n(Sorry, better luck next time)";
+        }
+        
+        /**
+         * GCFG_ConfigCommand($id, $cmd); 
+         */
+        public function ConfigCommand($cmd) {
+            echo "Führe Befehl aus: ".$cmd."\n";
         }
     }
 ?>
