@@ -3,7 +3,9 @@
 define("BASE_CATEGORY_NAME", "Heizkostenverteiler");
 
 /**
- *
+ * Splitter-Modul eines Metrona Datensammlers. Nachrichten werden geparst und
+ * an die HKV-Instanzen weitergeleitet.
+ * 
  */
 class MetronaDatensammler extends IPSModule {
 
@@ -20,7 +22,7 @@ class MetronaDatensammler extends IPSModule {
   public function Create() {
     parent::Create();
 
-    $this->RegisterPropertyString("HKVID", "123456");
+    $this->RegisterPropertyString("Name", "DS");
     $this->RegisterPropertyBoolean("Active", false);
   }
 
@@ -97,6 +99,7 @@ class MetronaDatensammler extends IPSModule {
     IPS_LogMessage("Datensammler", utf8_decode($data->Buffer));
     //Parse and write values to our variables
     $this->parseMessage(utf8_decode($data->Buffer));
+    echo utf8_decode($data->Buffer);
   }
 
   /**
