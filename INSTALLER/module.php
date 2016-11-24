@@ -21,16 +21,26 @@ class GIIZInstaller extends IPSModule {
         
         $isInstalled = false;
         $lblText = $isInstalled ? "Aktualisieren" : "Installieren";
-        return '
+        
+        $modules = array("Watchdog", "HKV", "Bla");
+        $form = '
         { 
         
         "actions": 
             [
                 { "type": "Label", "label": "Letzte Aktualisierung '.date("d.m.y H:i").'" },
+                ';
+        foreach($modules as $modul ) {
+            $form = $from.'{ "type": "Button", "label": "'.$modul.'", "onClick": "INST_Install($id);" }';
+        }
+        
+        $form = $form.'
                 { "type": "Button", "label": "'.$lblText.'", "onClick": "INST_Install($id);" }
             ] }
         
         ';
+        
+        return $form;
     }
     
     /**
