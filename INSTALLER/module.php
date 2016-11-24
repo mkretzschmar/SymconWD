@@ -3,14 +3,29 @@
 // Klassendefinition
 class GIIZInstaller extends IPSModule {
 
+  var $modules = array("Watchdog" => "GIIZ Watchdog", "HKV" => "Metrona HKV Datensammler", "Bla" => "Bla");
+
+  /**
+   * ---------------------------------------------------------------------------
+   * @param type $InstanceID
+   */
   public function __construct($InstanceID) {
     parent::__construct($InstanceID);
   }
 
+  /**
+   * ---------------------------------------------------------------------------
+   */
   public function Create() {
     parent::Create();
+    foreach ($this->$modules as $modul => $caption) {
+      $this->RegisterPropertyBoolean($modul, false);
+    }
   }
 
+  /**
+   * ---------------------------------------------------------------------------
+   */
   public function ApplyChanges() {
     parent::ApplyChanges();
   }
@@ -23,7 +38,7 @@ class GIIZInstaller extends IPSModule {
     $isInstalled = false;
     $lblText = $isInstalled ? "Aktualisieren" : "Installieren";
 
-    $modules = array("Watchdog" => "GIIZ Watchdog", "HKV" => "Metrona HKV Datensammler", "Bla" => "Bla");
+
     $form = '
         { 
         
@@ -33,8 +48,7 @@ class GIIZInstaller extends IPSModule {
                 { "type": "Label", "label": " " },
                 { "type": "Label", "label": "Verfügbare Module:" },
                 ';
-    foreach ($modules as $modul => $caption) {
-      $this->RegisterPropertyBoolean($modul, false);
+    foreach ($this->$modules as $modul => $caption) {
       $form = $form . '{ "type": "CheckBox", "name": "' . $modul . '", "caption": "' . $caption . '" },';
     }
 
@@ -63,7 +77,7 @@ class GIIZInstaller extends IPSModule {
    *
    */
   public function Install() {
-    echo "Installer wird ausgeführt...\nHKV: ".$this->ReadPropertyBoolean("HKV")."";
+    echo "Installer wird ausgeführt...\nHKV: " . $this->ReadPropertyBoolean("HKV") . "";
     if ($this->ReadPropertyBoolean("HKV")) {
       InstallMetronaHKV();
     }
