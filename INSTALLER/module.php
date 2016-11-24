@@ -31,7 +31,7 @@ class GIIZInstaller extends IPSModule {
                 { "type": "Label", "label": "Letzte Aktualisierung '.date("d.m.y H:i").'" },
                 ';
         foreach($modules as $modul ) {
-            $form = $from.'{ "type": "Button", "label": "'.$modul.'", "onClick": "INST_Install($id);" }';
+            $form = $form.'{ "type": "Button", "label": "'.$modul.'", "onClick": "INST_Install($id);" }';
         }
         
         $form = $form.'
