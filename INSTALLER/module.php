@@ -28,7 +28,7 @@ class GIIZInstaller extends IPSModule {
             [
                 { "type": "Label", "label": "Letzte Aktualisierung '.date("d.m.y H:i").'" },
                 { "type": "Button", "label": "'.$lblText.'", "onClick": "INST_Install($id, "'.$lblText.'");" },
-                { "type": "Button", "label": "Aktualisieren", "onClick": "INST_GetConfigurationForm($id);" }
+                { "type": "Button", "label": "Aktualisieren", "onClick": "$this->GetConfigurationForm();" }
             ] }
         
         ';
@@ -45,7 +45,7 @@ class GIIZInstaller extends IPSModule {
     
     /**
      *
-     * INST_Install($id);
+     * INST_Install($id, $mode);
      *
      */
     public function Install($mode) {
