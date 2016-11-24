@@ -97,14 +97,21 @@ class GIIZInstaller extends IPSModule {
     echo "AutoInstaller wird generiert... \n TODO: Implement";
   }
 
-  /** PRIVATE FUNCTIONS  */
+  // PRIVATE FUNCTIONS /////////////////////////////////////////////////////////
+  
+  /**
+   * 
+   */
   private function InstallWatchdog() {
     
   }
 
+  /**
+   * 
+   */
   private function InstallMetronaHKV() {
     echo "Installiere Metrona HKV-Umgebung (TODO: Konfigurator)";
-    MDS_AutoConfig($id);
+    MDS_AutoConfig();
   }
 
 }
