@@ -72,7 +72,7 @@ class MetronaHKVParser extends IPSModule {
     
     // Prepare
     
-    $msg = str_repeat($msg, "\n\r", "");
+    $msg = str_replace("\n\r", "", $msg);
     
     
     // Parse
