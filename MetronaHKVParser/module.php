@@ -38,8 +38,8 @@ class MetronaHKVParser extends IPSModule {
     $this->SetBuffer("hkvmessage", utf8_decode($data->Buffer));
     //Print buffer
     IPS_LogMessage("MetronaHKV", $this->GetBuffer("hkvmessage"));
-    
-    
+
+
     // Parse data, refresh state variables
   }
 
@@ -55,7 +55,36 @@ class MetronaHKVParser extends IPSModule {
    * HKVP_ParseMessage($id, $Msg); 
    */
   public function ParseMessage($Msg) {
-    echo "Nachricht wird verarbeitet: ".$Msg;
+    echo "Nachricht wird verarbeitet: " . $this->ParseMessageToString($Msg);
+  }
+
+  /**
+   * 
+   * @param type $msg
+   * @return type
+   */
+  private function ParseMessageToString($msg) {
+    // Validation
+    
+    if(substr($msg,0,2)!="1B") {
+      return "Invalid Message";
+    }
+    
+    // Prepare
+    
+    $msg = str_repeat($msg, "\n\r", "");
+    
+    
+    // Parse
+    
+    $devicenumber = substr($msg, 5, 8);
+    $data = "Gerätenummer: \t".$devicenumber."\n";
+    $sd = "0000-00-00";
+    $st = "00:00";
+    $data = $data."ShortDate: \t".$sd."\n";
+    $data = $data."ShortTime: \t".$st."\n";
+    $data = $data."Total: \t".$devicenumber."\n";
+    return $data;
   }
 
 }
