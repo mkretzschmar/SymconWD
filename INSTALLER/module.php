@@ -18,8 +18,20 @@ class GIIZInstaller extends IPSModule {
      * INST_GetConfigurationForm($id);
      */
     public function GetConfigurationForm() {
-		return '{ "actions": [ { "type": "Label", "label": "The current time is '.date("d.m.y H:i").'" } ] }';
-	}
+        
+        $isInstalled = false;
+        $lblText = $isInstalled ? "Aktualisieren" : "Installieren";
+        return '
+        { 
+        
+        "actions": 
+            [
+                { "type": "Button", "label": "'.$lblText.'", "onClick": "INST_Install($id);" },
+                { "type": "Label", "label": "Stand vom '.date("d.m.y H:i").'" }
+            ] }
+        
+        ';
+    }
     
     /**
      *
