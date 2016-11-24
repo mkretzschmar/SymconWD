@@ -62,6 +62,8 @@ class GIIZInstaller extends IPSModule {
      */
     public function Install() {
         echo "Installer wird ausgeführt...";
+        
+        InstallMetronaHKV();
     }
     
     /**
@@ -72,6 +74,17 @@ class GIIZInstaller extends IPSModule {
     public function GenerateAutoInstall() {
         echo "AutoInstaller wird generiert... \n TODO: Implement";
         
+    }
+    
+    
+    /** PRIVATE FUNCTIONS  */
+    private function InstallWatchdog() {
+        
+    }
+    
+    private function InstallMetronaHKV() {
+        echo "Installiere Metrona HKV-Umgebung (TODO: Konfigurator)";
+        MDS_AutoConfig($id);
     }
 }
 
