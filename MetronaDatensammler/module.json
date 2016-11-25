@@ -4,8 +4,8 @@
 	"type": 2,
 	"vendor": "GIIZ",
 	"aliases": ["Metrona Datensammler"],
-	"parentRequirements": ["{B87AC955-F258-468B-92FE-F4E0866A9E18}"],
-	"childRequirements": ["{9469359F-EEA6-4DB0-930F-F08C3440DDB3}"],
-	"implemented": ["{66164EB8-3439-4599-B937-A365D7A68567}"],
+	"parentRequirements": ["{79827379-F36E-4ADA-8A95-5F8D1DC92FA9}"],
+	"childRequirements": ["{2D35A92B-F179-44A3-91F6-34A5CE061D1D}"],
+	"implemented": ["{018EF6B5-AB94-40C6-AA53-46943E824ACF}", "{B87AC955-F258-468B-92FE-F4E0866A9E18}"],
 	"prefix": "MDS"
 }
