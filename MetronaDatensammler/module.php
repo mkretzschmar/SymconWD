@@ -24,6 +24,7 @@ class MetronaDatensammler extends IPSModule {
 
     $this->RegisterPropertyString("Name", "DS");
     $this->RegisterPropertyBoolean("Active", false);
+    print_r($this);
   }
 
   /**
@@ -99,13 +100,19 @@ class MetronaDatensammler extends IPSModule {
     IPS_LogMessage("Datensammler", utf8_decode($data->Buffer));
     //Parse and write values to our variables
     $this->parseMessage(utf8_decode($data->Buffer));
-    echo utf8_decode($data->Buffer);
+    
+    // CUTTER anlegen
+    
+    $idCutter= IPS_CreateInstance("{AC6C6E74-C797-40B3-BA82-F135D941D1A2}");
+    IPS_SetName($idCutter, "Cutter DS"); // Instanz benennen
+    IPS_SetParent($idCutter, $this->InstanceID);
   }
 
   /**
    * 
    */
   private function parseMessage($hkvmessage) {
+    IPS_LogMessage("Datensammler", "parseMessage()");
     // Validierung
     // Ermitteln der HKVID
     // Anlegen einer neuen HKV-Instanz, wenn noch nicht vorhanden
