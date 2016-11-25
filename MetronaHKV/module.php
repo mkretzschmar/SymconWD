@@ -23,7 +23,9 @@ class MetronaHKV extends IPSModule {
     //Connect to available splitter (Datensammler) or create a new one
     //$this->ConnectParent("{6179ED6A-FC31-413C-BB8E-1204150CF376}");
 
-    $this->ConnectParent("{3D704922-660A-43D1-9145-539552DD4EC6}"); // GUID Metrona HKV
+    $this->ConnectParent("{3D704922-660A-43D1-9145-539552DD4EC6}"); // GUID Metrona Datensammler
+
+    $this->SendDebug("CHANGED", "Verbunden mit Datensammler", 0);
     //Apply filter
     //$this->SetReceiveDataFilter($this->ReadPropertyString("ReceiveFilter"));
   }
@@ -37,6 +39,7 @@ class MetronaHKV extends IPSModule {
    */
   public function Send($Text) {
     $this->SendDataToParent(json_encode(Array("DataID" => "{B87AC955-F258-468B-92FE-F4E0866A9E18}", "Buffer" => $Text)));
+    $this->SendDebug("SEND", $Text, 0);
   }
 
   /**
@@ -48,7 +51,7 @@ class MetronaHKV extends IPSModule {
     $this->SetBuffer("hkvmessage", utf8_decode($data->Buffer));
     //Print buffer
     IPS_LogMessage("MetronaHKV", $this->GetBuffer("hkvmessage"));
-
+    $this->SendDebug("RECEIVED", $data, 0);
 
     // Parse data, refresh state variables
   }
@@ -56,7 +59,7 @@ class MetronaHKV extends IPSModule {
   /**
    * 
    */
- // public function MessageSink($TimeStamp, $SenderID, $Message, $Data) {
+  // public function MessageSink($TimeStamp, $SenderID, $Message, $Data) {
 //
 //   IPS_LogMessage("HKV MessageSink", "New message!!!");
 //  }

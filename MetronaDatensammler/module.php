@@ -35,6 +35,7 @@ class MetronaDatensammler extends IPSModule {
     parent::ApplyChanges();
     //Always create our own VirtualIO, when no parent is already available
     $this->RequireParent("{6179ED6A-FC31-413C-BB8E-1204150CF376}"); // Virtual IO
+    $this->SendDebug("CHANGED", "Verbunden mit VirtualIO", 0);
   }
 
   /**
@@ -85,6 +86,7 @@ class MetronaDatensammler extends IPSModule {
   public function ForwardData($JSONString) {
     $data = json_decode($JSONString);
     IPS_LogMessage("Datensammler FRWD", utf8_decode($data->Buffer));
+    $this->SendDebug("FORWARD", $data, 0);
     //We would package our payload here before sending it further...
     $this->SendDataToParent(json_encode(Array("DataID" => "{79827379-F36E-4ADA-8A95-5F8D1DC92FA9}", "Buffer" => $data->Buffer)));
 
@@ -99,6 +101,7 @@ class MetronaDatensammler extends IPSModule {
   public function ReceiveData($JSONString) {
     $data = json_decode($JSONString);
     IPS_LogMessage("Datensammler RECV", utf8_decode($data->Buffer));
+    $this->SendDebug("RECEIVED", $data, 0);
     //Parse and write values to our variables
 
     $msgArray = $this->parseMessage(utf8_decode($data->Buffer));
