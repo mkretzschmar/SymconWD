@@ -2,14 +2,9 @@
   "elements":
           [
             {
-              "name": "MonitorInstance",
-              "type": "SelectInstance",
-              "caption": "Zielvariable"
-            },
-            {
-              "name": "Text",
+              "name": "Name",
               "type": "ValidationTextBox",
-              "caption": "Text"
+              "caption": "Name"
             }
           ],
   "actions":
