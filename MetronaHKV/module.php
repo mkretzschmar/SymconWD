@@ -12,6 +12,7 @@ class MetronaHKV extends IPSModule {
     parent::Create();
 
     //$this->RegisterPropertyString("ReceiveFilter", "1B99*");
+    $this->RegisterPropertyString("Name", "HKV Test");
   }
 
   /**
