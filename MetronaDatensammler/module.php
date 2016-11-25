@@ -101,7 +101,7 @@ class MetronaDatensammler extends IPSModule {
   public function ReceiveData($JSONString) {
     $data = json_decode($JSONString);
     IPS_LogMessage("Datensammler RECV", utf8_decode($data->Buffer));
-    $this->SendDebug("RECEIVED", $data, 0);
+    $this->SendDebug("RECEIVED", utf8_decode($data->Buffer), 0);
     //Parse and write values to our variables
 
     //$msgArray = $this->parseMessage(utf8_decode($data->Buffer));
