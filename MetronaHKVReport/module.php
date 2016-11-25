@@ -23,17 +23,28 @@ class MetronaHKVReport extends IPSModule {
   }
 
   /**
-   * HKV_LoadMetadata($id); 
+   * HKVR_LoadMetadata($id); 
    */
   public function LoadMetadata() {
     echo "Lade Metadaten für HKV aus Datenbank...";
   }
 
   /**
-   * HKV_ShowStats($id); 
+   * HKVR_ShowStats($id); 
    */
   public function ShowStats() {
     echo "Statistik für HKV: ";
+    
+    // Liste aller HKV (Children of category 'Heizkostenverteiler', @TODO: user can select hkv root category)
+    $hkvroot =  
+    
+  }
+  
+    /**
+   * HKVR_GenerateReport($id); 
+   */
+  public function GenerateReport() {
+    echo "Bericht für HKV wird erzeugt.";
     
     
   }

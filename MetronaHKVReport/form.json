@@ -23,12 +23,12 @@
             {
               "type": "Button",
               "label": "Report erzeugen",
-              "onClick": "HKV_ShowStats($id);"
+              "onClick": "HKVR_ShowStats($id);"
             },
             {
               "type": "Button",
               "label": "Statistik anzeigen",
-              "onClick": "HKV_ShowStats($id);"
+              "onClick": "HKVR_ShowStats($id);"
             }
           ]
 }
