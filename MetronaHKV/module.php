@@ -1,12 +1,12 @@
 <?php
 
 /**
- * 
+ * TODO Rename to "VirtualHKV"
  */
 class MetronaHKV extends IPSModule {
 
   /**
-   * 
+   * ---------------------------------------------------------------------------
    */
   public function Create() {
     parent::Create();
@@ -16,7 +16,7 @@ class MetronaHKV extends IPSModule {
   }
 
   /**
-   * 
+   * ---------------------------------------------------------------------------
    */
   public function ApplyChanges() {
     parent::ApplyChanges();
@@ -32,8 +32,10 @@ class MetronaHKV extends IPSModule {
   }
 
   /**
-   * This function will be available automatically after the module is imported with the module control.
-   * Using the custom prefix this function will be callable from PHP and JSON-RPC through:
+   * ---------------------------------------------------------------------------
+   * This function will be available automatically after the module is imported
+   * with the module control. Using the custom prefix this function will be
+   * callable from PHP and JSON-RPC through:
    *
    * HKV_Send($id, $text);
    *
@@ -55,6 +57,16 @@ class MetronaHKV extends IPSModule {
     $this->SendDebug("RECEIVED", $this->GetBuffer("hkvmessage"), 0);
 
     // Parse data, refresh state variables
+    //TODO Create separate variable for each hkvid
+  }
+
+  // PRIVATE FUNCTIONS ////////////////////////////////////////////////////////
+
+  /**
+   * 
+   */
+  private function CreateVariables() {
+    
   }
 
   /**
@@ -64,19 +76,24 @@ class MetronaHKV extends IPSModule {
 //
 //   IPS_LogMessage("HKV MessageSink", "New message!!!");
 //  }
+  // PUBLIC FEATURE FUNCTIONS //////////////////////////////////////////////////
 
   /**
+   * ---------------------------------------------------------------------------
    * HKV_LoadMetadata($id); 
    */
   public function LoadMetadata() {
     echo "Lade Metadaten für HKV aus Datenbank...";
+    $this->SendDebug("METADATA", "NOT IMPLEMENTED", 0);
   }
 
   /**
+   * ---------------------------------------------------------------------------
    * HKV_ShowStats($id); 
    */
   public function ShowStats() {
     echo "Statistik für HKV: ";
+    $this->SendDebug("STATISTICS", "Messages received: --> NOT IMPLEMENTED", 0);
   }
 
 }
