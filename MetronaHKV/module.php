@@ -26,7 +26,7 @@ class MetronaHKV extends IPSModule {
 
     $this->ConnectParent("{3D704922-660A-43D1-9145-539552DD4EC6}"); // GUID Metrona Datensammler
 
-    $this->SendDebug("CHANGED", "Verbunden mit Datensammler", 0);
+    $this->SendDebug("CHANGED", "Verknüpft mit Datensammler", 0);
     //Apply filter
     //$this->SetReceiveDataFilter($this->ReadPropertyString("ReceiveFilter"));
   }
@@ -52,7 +52,7 @@ class MetronaHKV extends IPSModule {
     $this->SetBuffer("hkvmessage", utf8_decode($data->Buffer));
     //Print buffer
     IPS_LogMessage("MetronaHKV", $this->GetBuffer("hkvmessage"));
-    $this->SendDebug("RECEIVED", $data, 0);
+    $this->SendDebug("RECEIVED", $this->GetBuffer("hkvmessage"), 0);
 
     // Parse data, refresh state variables
   }
