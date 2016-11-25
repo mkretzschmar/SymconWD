@@ -24,6 +24,7 @@ class MetronaDatensammler extends IPSModule {
 
     $this->RegisterPropertyString("Name", "DS");
     $this->RegisterPropertyBoolean("Active", false);
+    $this->RegisterPropertyString("HKVID", "00000000");
     print_r($this);
   }
 
