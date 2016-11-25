@@ -104,7 +104,7 @@ class MetronaDatensammler extends IPSModule {
     $this->SendDebug("RECEIVED", $data, 0);
     //Parse and write values to our variables
 
-    $msgArray = $this->parseMessage(utf8_decode($data->Buffer));
+    //$msgArray = $this->parseMessage(utf8_decode($data->Buffer));
 
     // CUTTER anlegen
     //$idCutter = IPS_CreateInstance("{AC6C6E74-C797-40B3-BA82-F135D941D1A2}");
