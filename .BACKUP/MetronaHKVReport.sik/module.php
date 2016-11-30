@@ -36,7 +36,7 @@ class MetronaHKVReport extends IPSModule {
     echo "Statistik für HKV: ";
     
     // Liste aller HKV (Children of category 'Heizkostenverteiler', @TODO: user can select hkv root category)
-    $hkvroot =  
+    $hkvroot =  0;
     
   }
   

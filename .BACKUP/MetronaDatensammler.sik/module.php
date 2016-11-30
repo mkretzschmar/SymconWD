@@ -10,14 +10,14 @@ define("BASE_CATEGORY_NAME", "Heizkostenverteiler");
 class MetronaDatensammler extends IPSModule {
 
   /**
-   *
+   * ---------------------------------------------------------------------------
    */
   public function __construct($InstanceID) {
     parent::__construct($InstanceID);
   }
 
   /**
-   *
+   * ---------------------------------------------------------------------------
    */
   public function Create() {
     parent::Create();
@@ -29,7 +29,7 @@ class MetronaDatensammler extends IPSModule {
   }
 
   /**
-   *
+   * ---------------------------------------------------------------------------
    */
   public function ApplyChanges() {
     parent::ApplyChanges();
@@ -39,7 +39,60 @@ class MetronaDatensammler extends IPSModule {
   }
 
   /**
-   *
+   * ---------------------------------------------------------------------------
+   * @param type $JSONString
+   * @return string
+   */
+  public function ForwardData($JSONString) {
+    $data = json_decode($JSONString);
+    IPS_LogMessage("Datensammler FRWD", utf8_decode($data->Buffer));
+    $this->SendDebug("FORWARD", $data, 0);
+    //We would package our payload here before sending it further...
+    $this->SendDataToParent(json_encode(Array("DataID" => "{79827379-F36E-4ADA-8A95-5F8D1DC92FA9}", "Buffer" => $data->Buffer)));
+
+    //Normally we would wait here for ReceiveData getting called asynchronically and buffer some data
+    //Then we should extract the relevant feedback/data and return it to the caller
+    return "String data for the device instance!";
+  }
+
+  /**
+   * ---------------------------------------------------------------------------
+   */
+  public function ReceiveData($JSONString) {
+    $data = json_decode($JSONString);
+    IPS_LogMessage("Datensammler RECV", utf8_decode($data->Buffer));
+    $this->SendDebug("RECEIVED", utf8_decode($data->Buffer), 0);
+    //Parse and write values to our variables
+    //$msgArray = $this->parseMessage(utf8_decode($data->Buffer));
+    // CUTTER anlegen
+    //$idCutter = IPS_CreateInstance("{AC6C6E74-C797-40B3-BA82-F135D941D1A2}");
+    //IPS_SetName($idCutter, "Cutter DS"); // Instanz benennen
+    //IPS_SetParent($idCutter, $this->InstanceID);
+    // Prüfen, ob HKV existiert, falls nicht, anlegen und verlinken
+    // Daten an alle HKV weiterleiten (TODO: Filter nach HKVID, forward nur an TargetHKV)
+    $this->SendDataToChildren(json_encode(Array("DataID" => "{2D35A92B-F179-44A3-91F6-34A5CE061D1D}", "Buffer" => $data->Buffer)));
+  }
+
+  // PRIVATE FUNCTIONS ////////////////////////////////////////////////////////
+
+  /**
+   * ---------------------------------------------------------------------------
+   * TODO IMPLEMENT
+   */
+  private function parseMessage($hkvmessage) {
+    IPS_LogMessage("Datensammler", "parseMessage()");
+    // Validierung
+    // Ermitteln der HKVID
+    // Anlegen einer neuen HKV-Instanz, wenn noch nicht vorhanden
+    // Zuweisen der Werte (Variablen) der HKV-Instanz
+    // Wenn aktiviert: Forward der Nachricht an konfigurierbare 
+    return array("1" => "A", "2" => "B");
+  }
+
+  // PUBLIC FEATURE FUNCTIONS 
+
+  /**
+   * ---------------------------------------------------------------------------
    * MDS_RequestState($id);
    *
    */
@@ -48,7 +101,8 @@ class MetronaDatensammler extends IPSModule {
   }
 
   /**
-   * MDS_AutoConfig($id); 
+   * ---------------------------------------------------------------------------
+   * DS_AutoConfig($id); 
    */
   public function AutoConfig() {
     $parentId = 0; // $this->InstanceID
@@ -67,7 +121,8 @@ class MetronaDatensammler extends IPSModule {
   }
 
   /**
-   * MDS_AddHKV($id); 
+   * ---------------------------------------------------------------------------
+   * DS_AddHKV($id); 
    */
   public function AddHKV() {
     $Name = "HKV " . $this->ReadPropertyString("HKVID");
@@ -75,57 +130,12 @@ class MetronaDatensammler extends IPSModule {
     $InstanzID = @IPS_GetInstanceIDByName($Name, $CatIdHKV);
     if ($InstanzID === false) {
       echo "HKV wird angelegt...";
-      $InsID = IPS_CreateInstance("{9469359F-EEA6-4DB0-930F-F08C3440DDB3}");
+      $InsID = IPS_CreateInstance("{9469359F-EEA6-4DB0-930F-F08C3440DDB3}"); // Metrona HKV
       IPS_SetName($InsID, $Name);
       IPS_SetParent($InsID, $CatIdHKV);
     } else {
       echo "HKV bereits vorhanden!";
     }
-  }
-
-  public function ForwardData($JSONString) {
-    $data = json_decode($JSONString);
-    IPS_LogMessage("Datensammler FRWD", utf8_decode($data->Buffer));
-    $this->SendDebug("FORWARD", $data, 0);
-    //We would package our payload here before sending it further...
-    $this->SendDataToParent(json_encode(Array("DataID" => "{79827379-F36E-4ADA-8A95-5F8D1DC92FA9}", "Buffer" => $data->Buffer)));
-
-    //Normally we would wait here for ReceiveData getting called asynchronically and buffer some data
-    //Then we should extract the relevant feedback/data and return it to the caller
-    return "String data for the device instance!";
-  }
-
-  /**
-   * 
-   */
-  public function ReceiveData($JSONString) {
-    $data = json_decode($JSONString);
-    IPS_LogMessage("Datensammler RECV", utf8_decode($data->Buffer));
-    $this->SendDebug("RECEIVED", utf8_decode($data->Buffer), 0);
-    //Parse and write values to our variables
-
-    //$msgArray = $this->parseMessage(utf8_decode($data->Buffer));
-
-    // CUTTER anlegen
-    //$idCutter = IPS_CreateInstance("{AC6C6E74-C797-40B3-BA82-F135D941D1A2}");
-    //IPS_SetName($idCutter, "Cutter DS"); // Instanz benennen
-    //IPS_SetParent($idCutter, $this->InstanceID);
-    // Prüfen, ob HKV existiert, falls nicht, anlegen und verlinken
-    // Daten an alle HKV weiterleiten (TODO: Filter nach HKVID, forward nur an TargetHKV)
-    $this->SendDataToChildren(json_encode(Array("DataID" => "{2D35A92B-F179-44A3-91F6-34A5CE061D1D}", "Buffer" => $data->Buffer)));
-  }
-
-  /**
-   * 
-   */
-  private function parseMessage($hkvmessage) {
-    IPS_LogMessage("Datensammler", "parseMessage()");
-    // Validierung
-    // Ermitteln der HKVID
-    // Anlegen einer neuen HKV-Instanz, wenn noch nicht vorhanden
-    // Zuweisen der Werte (Variablen) der HKV-Instanz
-    // Wenn aktiviert: Forward der Nachricht an konfigurierbare 
-    return array("1" => "A", "2" => "B");
   }
 
 }
