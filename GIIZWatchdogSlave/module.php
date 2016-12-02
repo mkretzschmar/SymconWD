@@ -97,6 +97,7 @@ class GIIZWatchdogSlave extends IPSModule {
   ################## helper functions / wrapper ################################
 
   private function SendRPC($msg) {
+    $this->SendDebug("SENDRPC", $msg, 0);
     try {
       // ttp://user:password@127.0.0.1:3777/api/
       $user = $this->ReadPropertyString("RPCUser");

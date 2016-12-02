@@ -50,7 +50,6 @@ class GIIZWatchdogMaster extends IPSModule {
    */
 
   public function Hello($msg) {
-    echo "Hello received" . PHP_EOL;
     $this->SendDebug("RECEIVED", $msg, 0);
     // Identify
     $identifier = "";
