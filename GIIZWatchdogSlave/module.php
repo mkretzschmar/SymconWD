@@ -19,7 +19,7 @@ class GIIZWatchdogSlave extends IPSModule {
     parent::Create();
     $this->RegisterPropertyString("MyInstanceID", gethostname());
     $this->RegisterPropertyBoolean("SetRootName", true);
-    $this->RegisterPropertyBoolean("WDActive", false);
+    $this->RegisterPropertyBoolean("WDActive", true);
     $this->RegisterPropertyBoolean("SystemWDActive", true);
     $this->RegisterPropertyInteger("TresholdHDD", 512);
     $this->RegisterPropertyBoolean("DatabaseWDActive", false);
