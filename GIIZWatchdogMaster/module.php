@@ -46,12 +46,12 @@ class GIIZWatchdogMaster extends IPSModule {
   }
 
   /*
-   * GWDM_Hello($id);
+   * GWDM_Hello($id, $msg);
    */
 
-  public function Hello() {
+  public function Hello($msg) {
     echo "Hello received" . PHP_EOL;
-    $this->SendDebug("RECEIVED", "HELLO", 0);
+    $this->SendDebug("RECEIVED", $msg, 0);
     // Identify
     $identifier = "";
     // Refresh  Variable for remote instance
