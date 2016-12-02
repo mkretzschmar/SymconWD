@@ -17,9 +17,9 @@ class GIIZWatchdogMaster extends IPSModule {
   public function Create() {
     parent::Create();
     $this->RegisterPropertyBoolean("Active", true);
-    $this->RegisterPropertyBoolean("Email", true);
+    $this->RegisterPropertyBoolean("Email", false);
     $this->RegisterPropertyInteger("EmailInstanceID", 0);
-    $this->RegisterPropertyBoolean("MQTT", true);
+    $this->RegisterPropertyBoolean("MQTT", false);
     $this->RegisterPropertyInteger("MQTTPublisherInstanceID", 0);  }
 
   /**
