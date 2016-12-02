@@ -30,7 +30,7 @@ class GIIZWatchdogSlave extends IPSModule {
     $this->RegisterPropertyInteger("TresholdDB", 512);
 
     //Timer
-    $this->RegisterTimer("GIIZWatchdogSlaveTimer", 0, "$this->OnTimer();");
+    $this->RegisterTimer("GIIZWatchdogSlaveTimer", 0, "GWDS_OnTimer(".$this->InstanceID.");");
   }
 
   /**
@@ -49,13 +49,13 @@ class GIIZWatchdogSlave extends IPSModule {
 
   /**
    *
-   * OnTimer();
+   * GWDS_OnTimer($id);
    *
    */
-  private function OnTimer() {
+  public function OnTimer() {
     echo "onTimer()";
     $this->SendDebug("ONTIMER", $this->ReadPropertyString("MyInstanceID"), 0);
-    $this->SendRPC($this->ReadPropertyString("MyInstanceID"));
+    $this->SendRPC();
   }
 
   /**
@@ -96,8 +96,8 @@ class GIIZWatchdogSlave extends IPSModule {
 
   ################## helper functions / wrapper ################################
 
-  private function SendRPC($msg) {
-    $this->SendDebug("SENDRPC", $msg, 0);
+  private function SendRPC() {
+    $this->SendDebug("SENDRPC", $this->ReadPropertyString("MyInstanceID"), 0);
     try {
       // ttp://user:password@127.0.0.1:3777/api/
       $user = $this->ReadPropertyString("RPCUser");
@@ -106,7 +106,7 @@ class GIIZWatchdogSlave extends IPSModule {
       $connectionString = "http://" . $user . ":" . $pass . "@" . $host_port . "/api/";
       $this->SendDebug("CONNECT", "Trying to connect to " . $host_port, 0);
       $rpc = new JSONRPC($connectionString);
-      $result = $rpc->GWDM_Hello(32011, $msg);
+      $result = $rpc->GWDM_Hello(32011, $this->ReadPropertyString("MyInstanceID"));
       echo "Result: " . $result;
       $this->SendDebug("RESULT", $result, 0);
     } catch (Exception $e) {
