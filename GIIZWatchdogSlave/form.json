@@ -23,8 +23,8 @@
   ],
 	"actions":
 	[
-		{ "type": "Button", "label": "AutoConfig", "onClick": "WD_AutoConfig($id);" },
-		{ "type": "Button", "label": "Test", "onClick": "WD_SendState($id);" }
+		{ "type": "Button", "label": "Starte Autokonfiguration", "onClick": "GWDS_AutoConfig($id);" },
+		{ "type": "Button", "label": "Verbindungstest", "onClick": "GWDS_TestConnection($id);" }
 	],
     "status":
     [

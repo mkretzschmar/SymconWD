@@ -59,30 +59,30 @@ class GIIZWatchdogSlave extends IPSModule {
     IPS_SetName(0, $MyInstanceID);
   }
 
-  ################## helper functions / wrapper ################################
-  
   /**
    */
-  private function TestRPC() {
+  public function TestConnection() {
     // ttp://user:password@127.0.0.1:3777/api/
     $user = $this->ReadPropertyString("RPCUser");
     $pass = $this->ReadPropertyString("RPCPass");
     $str = $this->ReadPropertyString("host_port");
-    $connectionString = "http://".$user.":".$pass."@".$str."/api/";
-    $this->SendDebug("CONNECT", "Trying to connect to ".$connectionString, 0);
+    $connectionString = "http://" . $user . ":" . $pass . "@" . $str . "/api/";
+    $this->SendDebug("CONNECT", "Trying to connect to " . $connectionString, 0);
     $rpc = new JSONRPC($connectionString);
     $result = $rpc->IPS_GetKernelVersion();
     echo "KernelVersion: " . $result;
     $this->SendDebug("RESULT", $result, 0);
   }
-  
-    private function SendRPC() {
+
+  ################## helper functions / wrapper ################################
+
+  private function SendRPC() {
     // ttp://user:password@127.0.0.1:3777/api/
     $user = $this->ReadPropertyString("RPCUser");
     $pass = $this->ReadPropertyString("RPCPass");
     $str = $this->ReadPropertyString("host_port");
-    $connectionString = "http://".$user.":".$pass."@".$str."/api/";
-    $this->SendDebug("CONNECT", "Trying to connect to ".$connectionString, 0);
+    $connectionString = "http://" . $user . ":" . $pass . "@" . $str . "/api/";
+    $this->SendDebug("CONNECT", "Trying to connect to " . $connectionString, 0);
     $rpc = new JSONRPC($connectionString);
     $result = $rpc->GWDM_Hello(0);
     echo "Result: " . $result;
