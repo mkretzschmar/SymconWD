@@ -24,7 +24,7 @@ class GIIZWatchdogSlave extends IPSModule {
     $this->RegisterPropertyInteger("TresholdHDD", 512);
     $this->RegisterPropertyBoolean("DatabaseWDActive", false);
     $this->RegisterPropertyInteger("TresholdDB", 512);
-    $this->RegisterPropertyString("ConnectionString", "http://user:password@127.0.0.1:3777/api/");
+    $this->RegisterPropertyString("host:port", "127.0.0.1:3777");
     $this->RegisterPropertyString("RPCUser", "user");
     $this->RegisterPropertyString("RPCPass", "password");
     $this->RegisterPropertyInteger("Interval", 60);
@@ -67,7 +67,7 @@ class GIIZWatchdogSlave extends IPSModule {
     // ttp://user:password@127.0.0.1:3777/api/
     $user = $this->ReadPropertyString("RPCUser");
     $pass = $this->ReadPropertyString("RPCPass");
-    $str = $this->ReadPropertyString("ConnectionString");
+    $str = $this->ReadPropertyString("host:port");
     $connectionString = "http://".$user.":".$pass."@".$str."/api/";
     $this->SendDebug("CONNECT", "Trying to connect to ".$connectionString, 0);
     $rpc = new JSONRPC($connectionString);
@@ -80,7 +80,7 @@ class GIIZWatchdogSlave extends IPSModule {
     // ttp://user:password@127.0.0.1:3777/api/
     $user = $this->ReadPropertyString("RPCUser");
     $pass = $this->ReadPropertyString("RPCPass");
-    $str = $this->ReadPropertyString("ConnectionString");
+    $str = $this->ReadPropertyString("host:port");
     $connectionString = "http://".$user.":".$pass."@".$str."/api/";
     $this->SendDebug("CONNECT", "Trying to connect to ".$connectionString, 0);
     $rpc = new JSONRPC($connectionString);

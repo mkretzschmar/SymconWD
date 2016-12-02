@@ -6,15 +6,16 @@
 		{ "type": "ValidationTextBox", "name": "MyInstanceID",     "caption": "Instance ID" },
 		{ "type": "CheckBox",          "name": "SetRootName", "caption": "Instanz-ID als Root-Kategorie-Bezeichner verwenden"},
 		
-		{ "type": "Label", "caption": "System" },
+		{ "type": "Label", "caption": "System (Optional)" },
 		{ "type": "CheckBox",          "name": "SystemWDActive", "caption": "System-Watchdog aktivieren"},
 		{ "type": "NumberSpinner", "name": "TresholdHDD",    "caption": "Threshold (MB)" },
 		
-		{ "type": "Label", "caption": "Database" },
+		{ "type": "Label", "caption": "Datenbank (optional)" },
 		{ "type": "CheckBox",          "name": "DatabaseWDActive",	"caption": "Datenbank-Watchdog aktivieren"},
 		{ "type": "NumberSpinner",     "name": "TresholdDB",		"caption": "Threshold (MB)"},
 		
-		{ "type": "ValidationTextBox", "name": "ConnectionString",	"caption": "ConnectionString" },
+		{ "type": "Label", "caption": "Verbindung" },
+		{ "type": "ValidationTextBox", "name": "host:port",	"caption": "Host:Port" },
         { "name": "RPCUser", "type": "ValidationTextBox", "caption": "Benutzer" },
 		{ "name": "RPCPass", "type": "PasswordTextBox", "caption": "Passwort" },
 		{ "type": "NumberSpinner",     "name": "Interval",		"caption": "Interval"}
