@@ -15,7 +15,7 @@
 		{ "type": "NumberSpinner",     "name": "TresholdDB",		"caption": "Threshold (MB)"},
 		
 		{ "type": "Label", "caption": "Verbindung" },
-		{ "type": "ValidationTextBox", "name": "host:port",	"caption": "Host:Port" },
+		{ "type": "ValidationTextBox", "name": "host_port",	"caption": "Host:Port" },
         { "name": "RPCUser", "type": "ValidationTextBox", "caption": "Benutzer" },
 		{ "name": "RPCPass", "type": "PasswordTextBox", "caption": "Passwort" },
 		{ "type": "NumberSpinner",     "name": "Interval",		"caption": "Interval"}
