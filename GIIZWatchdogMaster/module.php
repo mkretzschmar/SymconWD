@@ -17,7 +17,7 @@ class GIIZWatchdogMaster extends IPSModule {
   public function Create() {
     parent::Create();
 
-    $baseCategoryId = checkBaseCategory();
+    $baseCategoryId = $this->CheckBaseCategory();
     $this->RegisterPropertyBoolean("Active", true);
     $this->RegisterPropertyInteger("PropertyCategoryID", $baseCategoryId);
     $this->RegisterPropertyBoolean("Email", false);
@@ -78,7 +78,7 @@ class GIIZWatchdogMaster extends IPSModule {
    * 
    * @return type
    */
-  private function checkBaseCategory() {
+  private function CheckBaseCategory() {
     $baseCategoryID = @IPS_GetCategoryIDByName("WATCHDOG", 0);
     if ($baseCategoryID === false) {
       echo "Category not found, will be created...";
