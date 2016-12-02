@@ -37,7 +37,7 @@ class GIIZWatchdogSlave extends IPSModule {
    */
   public function ApplyChanges() {
     parent::ApplyChanges();
-    $this->SetTimerInterval("CheckTargetsTimer", $this->ReadPropertyInteger("Interval") * 1000);
+    $this->SetTimerInterval("GIIZWatchdogSlaveTimer", $this->ReadPropertyInteger("Interval") * 1000);
   }
 
   /**
