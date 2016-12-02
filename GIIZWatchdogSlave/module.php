@@ -28,6 +28,9 @@ class GIIZWatchdogSlave extends IPSModule {
     $this->RegisterPropertyInteger("TresholdHDD", 512);
     $this->RegisterPropertyBoolean("DatabaseWDActive", false);
     $this->RegisterPropertyInteger("TresholdDB", 512);
+
+    //Timer
+    $this->RegisterTimer("GIIZWatchdogSlaveTimer", 0, 'GWDS_OnTimer();');
   }
 
   /**
@@ -37,29 +40,40 @@ class GIIZWatchdogSlave extends IPSModule {
   }
 
   /**
+   * 
+   */
+  public function Destroy() {
+    parent::Destroy();
+  }
+
+  /**
    *
-   * GWD_SendState($id);
+   * GWDS_OnTimer($id);
    *
    */
-  public function SendState() {
-    $this->SendRPC();
+  public function OnTimer() {
+    echo "onTimer()";
+    $this->SendDebug("ONTIMER", "...", 0);
+    $this->SendRPC("Hello");
   }
 
   /**
    *
    *
-   * GWD_AutoConfig($id);
+   * GWDS_AutoConfig($id);
    *
    */
   public function AutoConfig() {
     $MyInstanceID = $this->ReadPropertyString("MyInstanceID");
     echo "Instanz-ID: " . $this->InstanceID . ", IPS Instanzname: " . $MyInstanceID;
-    $this->SendRPC();
+    $this->SendDebug("AUTOCONFIG", "Meine InstanzID: " . $MyInstanceID, 0);
 
     IPS_SetName(0, $MyInstanceID);
   }
 
   /**
+   * 
+   * GWDS_TestConnection($id);
    */
   public function TestConnection() {
     try {
@@ -72,7 +86,7 @@ class GIIZWatchdogSlave extends IPSModule {
       $rpc = new JSONRPC($connectionString);
       $result = $rpc->IPS_GetKernelVersion();
       echo "Verbindungstest erfolgreich. KernelVersion: " . $result;
-      $this->SendDebug("RESULT", "SUCCESS. Remote Instance Kernel Version: ".$result, 0);
+      $this->SendDebug("RESULT", "SUCCESS. Remote Instance Kernel Version: " . $result, 0);
     } catch (Exception $e) {
       echo 'Exception abgefangen: ', $e->getMessage(), "\n";
       $this->SendDebug("ERROR", $e->getMessage(), 0);
@@ -81,7 +95,7 @@ class GIIZWatchdogSlave extends IPSModule {
 
   ################## helper functions / wrapper ################################
 
-  private function SendRPC() {
+  private function SendRPC($msg) {
     try {
       // ttp://user:password@127.0.0.1:3777/api/
       $user = $this->ReadPropertyString("RPCUser");
@@ -90,7 +104,7 @@ class GIIZWatchdogSlave extends IPSModule {
       $connectionString = "http://" . $user . ":" . $pass . "@" . $host_port . "/api/";
       $this->SendDebug("CONNECT", "Trying to connect to " . $host_port, 0);
       $rpc = new JSONRPC($connectionString);
-      $result = $rpc->GWDM_Hello(0);
+      $result = $rpc->GWDM_Hello($msg);
       echo "Result: " . $result;
       $this->SendDebug("RESULT", $result, 0);
     } catch (Exception $e) {

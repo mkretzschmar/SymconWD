@@ -11,6 +11,11 @@
               "caption": " Aktiviert"
             },
             {
+              "type": "SelectCategory",
+              "name": "PropertyCategoryID",
+              "caption": "Zielkategorie"
+            },
+            {
               "type": "Label",
               "label": "Benachrichtigungen"
             },
