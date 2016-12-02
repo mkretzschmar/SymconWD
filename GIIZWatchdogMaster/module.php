@@ -17,7 +17,7 @@ class GIIZWatchdogMaster extends IPSModule {
   public function Create() {
     parent::Create();
 
-    $baseCategoryId = $this->CheckBaseCategory();
+    $baseCategoryId = 0;//$this->CheckBaseCategory();
     $this->RegisterPropertyBoolean("Active", true);
     $this->RegisterPropertyInteger("PropertyCategoryID", $baseCategoryId);
     $this->RegisterPropertyBoolean("Email", false);
