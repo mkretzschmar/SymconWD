@@ -55,7 +55,7 @@ class GIIZWatchdogSlave extends IPSModule {
   public function OnTimer() {
     echo "onTimer()";
     $this->SendDebug("ONTIMER", $this->ReadPropertyString("MyInstanceID"), 0);
-    //$this->SendRPC("Hello");
+    $this->SendRPC($this->ReadPropertyString("MyInstanceID"));
   }
 
   /**

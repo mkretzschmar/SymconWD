@@ -9,7 +9,7 @@
 		{ "type": "ValidationTextBox", "name": "host_port",	"caption": "Host:Port" },
         { "name": "RPCUser", "type": "ValidationTextBox", "caption": "Benutzer" },
 		{ "name": "RPCPass", "type": "PasswordTextBox", "caption": "Passwort" },
-		{ "type": "NumberSpinner",     "name": "Interval",		"caption": "Interval"},
+		{ "type": "NumberSpinner",     "name": "Interval",		"caption": "Intervall"},
 		
 		
 		{ "type": "Label", "caption": "System (Optional)" },
