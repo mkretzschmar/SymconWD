@@ -7,20 +7,16 @@ Bibliothek | GUID                                 | URL
 -----------|--------------------------------------|-----
 SymconGIIZ | fababece-91ed-11e6-ae22-56b6b6499611 | http://whz-aiis-vm14.zw.fh-zwickau.de/giiz/SymconGIIZ.git
 
-Modulname | Typ | Beschreibung | GUID | Name
+Modulname | Typ | Beschreibung | GUID | Prefix | Name
 ----------|-----|--------------|------|--------------------
-CONFIGURATOR | 0:Kern  | Autokonfiguration einer IP-Symcon-Instanz |603DB2B9-B619-4342-B442-64852CEFA5D3
-CONNECTORS   | 1:I/O   | |		
-MetronaHKV   | 3:Gerät | | 9469359F-EEA6-4DB0-930F-F08C3440DDB3 | MetronaHKV			
+CONFIGURATOR | 0:Kern  | Autokonfiguration einer IP-Symcon-Instanz | 603DB2B9-B619-4342-B442-64852CEFA5D3 | |
+CONNECTORS   | 1:I/O   | | |
 INSTALLER    | 0:Kern  | | BA6CEB07-26B4-4EEE-845D-10440DC3E70B | GIIZInstaller
-MASTER	     | 0:Kern  | | 245A4B06-80EB-40E0-B287-DA1F690D4C70 | GIIZMonitoringMaster
 MYSQL	     | 1:I/O   | | DE20A8C7-F186-4509-A1ED-2467452B5534 | GIIZMySQLConnector
-WD	         | 0:Kern  | C285616F-5891-4E0A-9A5E-DE05B6218C0A | GIIZWatchdogSlave
+WDClient     | 0:Kern  | | C285616F-5891-4E0A-9A5E-DE05B6218C0A | GIIZWatchdogClient 
+WDServer     | 0:Kern  | | 245A4B06-80EB-40E0-B287-DA1F690D4C70 | GIIZWatchdogServer
+ ??     | 0:Kern  | 3AE56C28-4AFB-46EF-94EF-FA60D8966397| 
 PresenceSimulator   | 3:Gerät | | 88D15C93-EDA8-4AF8-BCB4-81310F81766B | PresenceSimulator
-MetronaDatensammler | 3:Gerät | | 3D704922-660A-43D1-9145-539552DD4EC6 | MetronaDatensammler
-(Offen)|||39940BBF-A65E-4649-8EC8-8BA41C853250|
-(Offen)|||A25EA39B-92E4-45DE-B2D9-8252C3B7E7C6|
-(Offen)|||3AE56C28-4AFB-46EF-94EF-FA60D8966397|
 (Offen)|||48363460-5F77-4274-9CB5-628853C2BA1D|
 (Offen)|||2EF85B2D-DB30-41FE-9E86-817A6041EE59|
 (Offen)|||E3D7B605-67F8-412C-94E4-9991C5EECBF8|

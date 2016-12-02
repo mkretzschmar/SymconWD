@@ -1,0 +1,7 @@
+{
+  "elements":
+  [
+	{ "type": "Label", "label": "GIIZ Monitoring - Master Modul" },
+	{ "type": "CheckBox", "name": "Active", "caption": " Aktiviert" }
+  ]
+}

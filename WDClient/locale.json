@@ -1,0 +1,13 @@
+{
+    "translations": {
+        "de": {
+            "Instance ID": "Instanz-ID",
+            "System": "System",
+            "Database": "Datenbank",
+            "Harddisk": "Festplatte",
+            "Threshold (MB)" : "Grenzwert (MB)",
+            "Watchdog not evaluated." : "Watchdog nicht geprüft.",
+            "Watchdog successful evaluated." : "Watchdog erfolgreich geprüft."
+        }
+    }
+}
