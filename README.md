@@ -13,8 +13,8 @@ CONFIGURATOR | 0:Kern  | Autokonfiguration einer IP-Symcon-Instanz | 603DB2B9-B6
 CONNECTORS   | 1:I/O   | | |
 INSTALLER    | 0:Kern  | | BA6CEB07-26B4-4EEE-845D-10440DC3E70B | GIIZInstaller
 MYSQL	     | 1:I/O   | | DE20A8C7-F186-4509-A1ED-2467452B5534 | GIIZMySQLConnector
-WDClient     | 0:Kern  | | C285616F-5891-4E0A-9A5E-DE05B6218C0A | GIIZWatchdogClient 
-WDServer     | 0:Kern  | | 245A4B06-80EB-40E0-B287-DA1F690D4C70 | GIIZWatchdogServer
+GIIZWatchdogSlave     | 0:Kern  | | C285616F-5891-4E0A-9A5E-DE05B6218C0A | GIIZWatchdogSlave | GWDS
+GIIZWatchdogMaster     | 0:Kern  | | 245A4B06-80EB-40E0-B287-DA1F690D4C70 | GIIZWatchdogMaster | GWDM
  ??     | 0:Kern  | 3AE56C28-4AFB-46EF-94EF-FA60D8966397| 
 PresenceSimulator   | 3:Gerät | | 88D15C93-EDA8-4AF8-BCB4-81310F81766B | PresenceSimulator
 (Offen)|||48363460-5F77-4274-9CB5-628853C2BA1D|

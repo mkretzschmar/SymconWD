@@ -1,6 +1,6 @@
 <?php
   // Implementierung der Watchdog Zentralinstanz
-  class GIIZMonitoringMaster extends IPSModule {
+  class GIIZWatchdogMaster extends IPSModule {
  
     public function __construct($InstanceID) {
       parent::__construct($InstanceID);
@@ -24,7 +24,6 @@
     
     /* 
      * GWDM_Hello($id);
-     *
      */
     public function Hello() {
         echo "Hello received".PHP_EOL;
