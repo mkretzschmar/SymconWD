@@ -69,7 +69,7 @@ class GIIZWatchdogSlave extends IPSModule {
     $connectionString = "http://" . $user . ":" . $pass . "@" . $str . "/api/";
     $this->SendDebug("CONNECT", "Trying to connect to " . $connectionString, 0);
     $rpc = new JSONRPC($connectionString);
-    $result = $rpc->IPS_GetKernelVersion();
+    $result = @$rpc->IPS_GetKernelVersion();
     echo "KernelVersion: " . $result;
     $this->SendDebug("RESULT", $result, 0);
   }
