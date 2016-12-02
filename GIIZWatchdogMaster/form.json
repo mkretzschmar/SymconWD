@@ -1,7 +1,38 @@
 {
   "elements":
-  [
-	{ "type": "Label", "label": "GIIZ Monitoring - Master Modul" },
-	{ "type": "CheckBox", "name": "Active", "caption": " Aktiviert" }
-  ]
+          [
+            {
+              "type": "Label",
+              "label": "GIIZ Monitoring - Master Modul"
+            },
+            {
+              "type": "CheckBox",
+              "name": "Active",
+              "caption": " Aktiviert"
+            },
+            {
+              "type": "Label",
+              "label": "Benachrichtigungen"
+            },
+            {
+              "type": "CheckBox",
+              "name": "Email",
+              "caption": " Email"
+            },
+            {
+              "type": "SelectInstance",
+              "name": "EmailInstanceID",
+              "caption": "Email-Instanz"
+            },
+            {
+              "type": "CheckBox",
+              "name": "MQTT",
+              "caption": " MQTT"
+            },
+            {
+              "type": "SelectInstance",
+              "name": "MQTTPublisherInstanceID",
+              "caption": "MQTT Publisher"
+            }
+          ]
 }
