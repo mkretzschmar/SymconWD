@@ -30,7 +30,7 @@ class GIIZWatchdogSlave extends IPSModule {
     $this->RegisterPropertyInteger("TresholdDB", 512);
 
     //Timer
-    $this->RegisterTimer("GIIZWatchdogSlaveTimer", 0, "GWDS_OnTimer(".$this->InstanceID.");");
+    $this->RegisterTimer("GIIZWatchdogSlaveTimer", 0, "$this->OnTimer();");
   }
 
   /**
@@ -49,10 +49,10 @@ class GIIZWatchdogSlave extends IPSModule {
 
   /**
    *
-   * GWDS_OnTimer($id);
+   * OnTimer();
    *
    */
-  public function OnTimer() {
+  private function OnTimer() {
     echo "onTimer()";
     $this->SendDebug("ONTIMER", $this->ReadPropertyString("MyInstanceID"), 0);
     $this->SendRPC($this->ReadPropertyString("MyInstanceID"));
