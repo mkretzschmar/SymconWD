@@ -71,8 +71,8 @@ class GIIZWatchdogSlave extends IPSModule {
       $this->SendDebug("CONNECT", "Trying to connect to " . $host_port, 0);
       $rpc = new JSONRPC($connectionString);
       $result = $rpc->IPS_GetKernelVersion();
-      echo "KernelVersion: " . $result;
-      $this->SendDebug("RESULT", $result, 0);
+      echo "Verbindungstest erfolgreich. KernelVersion: " . $result;
+      $this->SendDebug("RESULT", "SUCCESS. Remote Instance Kernel Version: ".$result, 0);
     } catch (Exception $e) {
       echo 'Exception abgefangen: ', $e->getMessage(), "\n";
       $this->SendDebug("ERROR", $e->getMessage(), 0);
@@ -82,16 +82,21 @@ class GIIZWatchdogSlave extends IPSModule {
   ################## helper functions / wrapper ################################
 
   private function SendRPC() {
-    // ttp://user:password@127.0.0.1:3777/api/
-    $user = $this->ReadPropertyString("RPCUser");
-    $pass = $this->ReadPropertyString("RPCPass");
-    $host_port = $this->ReadPropertyString("host_port");
-    $connectionString = "http://" . $user . ":" . $pass . "@" . $host_port . "/api/";
-    $this->SendDebug("CONNECT", "Trying to connect to " . $host_port, 0);
-    $rpc = new JSONRPC($connectionString);
-    $result = $rpc->GWDM_Hello(0);
-    echo "Result: " . $result;
-    $this->SendDebug("RESULT", $result, 0);
+    try {
+      // ttp://user:password@127.0.0.1:3777/api/
+      $user = $this->ReadPropertyString("RPCUser");
+      $pass = $this->ReadPropertyString("RPCPass");
+      $host_port = $this->ReadPropertyString("host_port");
+      $connectionString = "http://" . $user . ":" . $pass . "@" . $host_port . "/api/";
+      $this->SendDebug("CONNECT", "Trying to connect to " . $host_port, 0);
+      $rpc = new JSONRPC($connectionString);
+      $result = $rpc->GWDM_Hello(0);
+      echo "Result: " . $result;
+      $this->SendDebug("RESULT", $result, 0);
+    } catch (Exception $e) {
+      echo 'Exception abgefangen: ', $e->getMessage(), "\n";
+      $this->SendDebug("ERROR", $e->getMessage(), 0);
+    }
   }
 
 }
