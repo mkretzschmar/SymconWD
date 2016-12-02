@@ -17,7 +17,7 @@ class GIIZWatchdogMaster extends IPSModule {
   public function Create() {
     parent::Create();
     $this->RegisterPropertyBoolean("Active", true);
-    $this->RegisterPropertyInstanceID("EmailInstanceID", 0);
+    $this->RegisterPropertyInteger("EmailInstanceID", 0);
   }
 
   /**
@@ -25,7 +25,7 @@ class GIIZWatchdogMaster extends IPSModule {
    */
   public function ApplyChanges() {
     parent::ApplyChanges();
-    echo "Neue Email-InstanzID: ".$this->ReaPropertyInstanceID("EmailInstanceID");
+    echo "Neue Email-InstanzID: ".$this->ReadPropertyInteger("EmailInstanceID");
   }
 
   /*
