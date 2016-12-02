@@ -49,17 +49,6 @@ class GIIZWatchdogSlave extends IPSModule {
 
   /**
    *
-   * GWDS_OnTimer($id);
-   *
-   */
-  public function OnTimer() {
-    echo "onTimer()";
-    $this->SendDebug("ONTIMER", "...", 0);
-    //$this->SendRPC("Hello");
-  }
-
-  /**
-   *
    *
    * GWDS_AutoConfig($id);
    *
@@ -94,7 +83,16 @@ class GIIZWatchdogSlave extends IPSModule {
     }
   }
 
-  ################## helper functions / wrapper ################################
+  ################## PRIVATE FUNCTIONS ################################
+
+  /**
+   *
+   */
+  private function OnTimer() {
+    echo "onTimer()";
+    $this->SendDebug("ONTIMER", "...", 0);
+    //$this->SendRPC("Hello");
+  }
 
   private function SendRPC($msg) {
     try {
