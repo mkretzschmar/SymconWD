@@ -51,6 +51,7 @@ class GIIZWatchdogMaster extends IPSModule {
 
   public function Hello() {
     echo "Hello received" . PHP_EOL;
+    $this->SendDebug("RECEIVED", "HELLO", 0);
     // Identify
     $identifier = "";
     // Refresh  Variable for remote instance
