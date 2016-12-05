@@ -68,7 +68,7 @@ class GIIZWatchdogMaster extends IPSModule {
       //echo "The Variable ID is: " . $VarID;
     }
     // refresh variable
-    IPS_SetValue($VarID_SlaveInstanz, time());
+    SetValue($VarID_SlaveInstanz, time());
     ECHO "SUCCESS.";
   }
 
