@@ -12,8 +12,8 @@
             },
             {
               "type": "SelectCategory",
-              "name": "PropertyCategoryID",
-              "caption": "Zielkategorie"
+              "name": "BaseCategory",
+              "caption": "Basiskategorie"
             },
             {
               "type": "Label",

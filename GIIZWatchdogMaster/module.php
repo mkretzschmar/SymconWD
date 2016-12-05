@@ -20,6 +20,7 @@ class GIIZWatchdogMaster extends IPSModule {
     $baseCategoryId = 0;//$this->CheckBaseCategory();
     $this->RegisterPropertyBoolean("Active", true);
     //$this->RegisterPropertyInteger("PropertyCategoryID", $baseCategoryId);
+    $this->RegisterPropertyInteger("BaseCategory", 0);
     $this->RegisterPropertyBoolean("Email", false);
     $this->RegisterPropertyInteger("EmailInstanceID", 0);
     $this->RegisterPropertyBoolean("MQTT", false);
