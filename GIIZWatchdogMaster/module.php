@@ -17,7 +17,7 @@ class GIIZWatchdogMaster extends IPSModule {
   public function Create() {
     parent::Create();
 
-    $baseCategoryId = 0;//$this->CheckBaseCategory();
+    $baseCategoryId = 0; //$this->CheckBaseCategory();
     $this->RegisterPropertyBoolean("Active", true);
     //$this->RegisterPropertyInteger("PropertyCategoryID", $baseCategoryId);
     $this->RegisterPropertyInteger("BaseCategory", 0);
@@ -58,22 +58,18 @@ class GIIZWatchdogMaster extends IPSModule {
     $baseCategoryID = @IPS_GetCategoryIDByName("WATCHDOG", 0);
     $VarID = @IPS_GetVariableIDByName($identifier, $baseCategoryID);
     if ($VarID === false) {
-      echo "Variable for remote instance not found, will be created...";
-      echo "Create link to watchdog";
+      //echo "Variable for remote instance not found, will be created...";
+
+      $VarID_SlaveInstanz = IPS_CreateVariable(1);
+      IPS_SetName($VarID_SlaveInstanz, $msg); // Variable benennen
+      IPS_SetParent($VarID_SlaveInstanz, $this->InstanceID);
+      //echo "Create link to watchdog";
     } else {
-      echo "The Variable ID is: " . $VarID;
+      //echo "The Variable ID is: " . $VarID;
     }
     // refresh variable
-  }
-
-  /*
-   * GWDM_Transmit($id, $data);
-   *
-   */
-
-  public function Transmit($data) {
-    echo "Received: " . $data . PHP_EOL;
-    $this->SendDebug("Transmit", $data, 0);
+    IPS_SetValue($VarID_SlaveInstanz, time());
+    ECHO "SUCCESS.";
   }
 
   /**
@@ -83,11 +79,11 @@ class GIIZWatchdogMaster extends IPSModule {
   private function CheckBaseCategory() {
     $baseCategoryID = @IPS_GetCategoryIDByName("WATCHDOG", 0);
     if ($baseCategoryID === false) {
-      echo "Category not found, will be created...";
+      //echo "Category not found, will be created...";
       $baseCategoryID = IPS_CreateCategory();
       IPS_SetName($baseCategoryID, "WATCHDOG");
     } else {
-      echo "The Category ID is: " . $baseCategoryID;
+      //echo "The Category ID is: " . $baseCategoryID;
     }
     return $baseCategoryID;
   }
