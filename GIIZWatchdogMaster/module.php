@@ -53,10 +53,11 @@ class GIIZWatchdogMaster extends IPSModule {
   public function Hello($msg) {
     $this->SendDebug("RECEIVED", $msg, 0);
     // Identify
-    $identifier = "";
+    $identifier = $msg;
     // Refresh  Variable for remote instance
-    $baseCategoryID = @IPS_GetCategoryIDByName("WATCHDOG", 0);
-    $VarID = @IPS_GetVariableIDByName($identifier, $baseCategoryID);
+    //$baseCategoryID = @IPS_GetCategoryIDByName("WATCHDOG", 0);
+    //$VarID = @IPS_GetVariableIDByName($identifier, $baseCategoryID);
+    $VarID = @IPS_GetVariableIDByName($identifier, $this->InstanceID);
     if ($VarID === false) {
       //echo "Variable for remote instance not found, will be created...";
 
@@ -69,7 +70,7 @@ class GIIZWatchdogMaster extends IPSModule {
     }
     // refresh variable
     SetValue($VarID_SlaveInstanz, time());
-    ECHO "SUCCESS.";
+    return "SUCCESS.";
   }
 
   /**
