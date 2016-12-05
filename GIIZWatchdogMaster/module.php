@@ -56,9 +56,9 @@ class GIIZWatchdogMaster extends IPSModule {
     $identifier = $msg;
     // Refresh  Variable for remote instance
     //$baseCategoryID = @IPS_GetCategoryIDByName("WATCHDOG", 0);
-    //$VarID = @IPS_GetVariableIDByName($identifier, $baseCategoryID);
-    $VarID = @IPS_GetVariableIDByName($identifier, $this->InstanceID);
-    if ($VarID === false) {
+    //$VarID_SlaveInstanz = @IPS_GetVariableIDByName($identifier, $baseCategoryID);
+    $VarID_SlaveInstanz = @IPS_GetVariableIDByName($identifier, $this->InstanceID);
+    if ($VarID_SlaveInstanz === false) {
       //echo "Variable for remote instance not found, will be created...";
 
       $VarID_SlaveInstanz = IPS_CreateVariable(1);
