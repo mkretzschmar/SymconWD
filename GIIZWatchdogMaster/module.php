@@ -73,6 +73,7 @@ class GIIZWatchdogMaster extends IPSModule {
 
   public function Transmit($data) {
     echo "Received: " . $data . PHP_EOL;
+    $this->SendDebug("Transmit", $data, 0);
   }
 
   /**
