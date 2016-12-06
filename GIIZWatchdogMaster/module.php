@@ -37,6 +37,7 @@ class GIIZWatchdogMaster extends IPSModule {
   public function ApplyChanges() {
     parent::ApplyChanges();
     //echo "Neue Email-InstanzID: " . $this->ReadPropertyInteger("EmailInstanceID");
+    IPS_SetIdent($this->InstanceID, "GIIZWatchdogMaster");
   }
 
   /**
