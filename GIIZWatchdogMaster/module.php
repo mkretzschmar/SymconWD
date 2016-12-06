@@ -4,7 +4,7 @@
 class GIIZWatchdogMaster extends IPSModule {
 
   /**
-   * 
+   * ---------------------------------------------------------------------------
    * @param type $InstanceID
    */
   public function __construct($InstanceID) {
@@ -12,7 +12,7 @@ class GIIZWatchdogMaster extends IPSModule {
   }
 
   /**
-   * 
+   * ---------------------------------------------------------------------------
    */
   public function Create() {
     parent::Create();
@@ -25,31 +25,37 @@ class GIIZWatchdogMaster extends IPSModule {
     $this->RegisterPropertyInteger("EmailInstanceID", 0);
     $this->RegisterPropertyBoolean("MQTT", false);
     $this->RegisterPropertyInteger("MQTTPublisherInstanceID", 0);
+    $this->RegisterPropertyInteger("CheckInterval", 60);
+    $this->RegisterPropertyInteger("NotificationInterval", 60);
 
     // Check, if WD base category is available
   }
 
   /**
-   * 
+   * ---------------------------------------------------------------------------
    */
   public function ApplyChanges() {
     parent::ApplyChanges();
     //echo "Neue Email-InstanzID: " . $this->ReadPropertyInteger("EmailInstanceID");
   }
 
-  /*
+  /**
+   * ---------------------------------------------------------------------------
    * GWDM_CreateWatchdogReport($id);
    *
    */
 
+  /**
+   * ---------------------------------------------------------------------------
+   */
   public function CreateWatchdogReport() {
     
   }
 
-  /*
+  /**
+   * ---------------------------------------------------------------------------
    * GWDM_Hello($id, $msg);
    */
-
   public function Hello($msg) {
     $this->SendDebug("RECEIVED", $msg, 0);
     // Identify

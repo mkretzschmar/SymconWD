@@ -106,7 +106,8 @@ class GIIZWatchdogSlave extends IPSModule {
       $connectionString = "http://" . $user . ":" . $pass . "@" . $host_port . "/api/";
       $this->SendDebug("CONNECT", "Trying to connect to " . $host_port, 0);
       $rpc = new JSONRPC($connectionString);
-      $result = $rpc->GWDM_Hello(38834, $this->ReadPropertyString("MyInstanceID"));
+      $remoteId = $rpc->IPS_GetInstanceListByModuleID("{245A4B06-80EB-40E0-B287-DA1F690D4C70}");
+      $result = $rpc->GWDM_Hello($remoteId, $this->ReadPropertyString("MyInstanceID"));
       echo "Result: " . $result;
       $this->SendDebug("RESULT", $result, 0);
     } catch (Exception $e) {
