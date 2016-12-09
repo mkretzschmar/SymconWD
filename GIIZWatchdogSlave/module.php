@@ -65,11 +65,10 @@ class GIIZWatchdogSlave extends IPSModule {
    *
    */
   public function AutoConfig() {
-    $MyInstanceID = $this->ReadPropertyString("MyInstanceID");
-    echo "Instanz-ID: " . $this->InstanceID . ", IPS Instanzname: " . $MyInstanceID;
-    $this->SendDebug("AUTOCONFIG", "Meine InstanzID: " . $MyInstanceID, 0);
-
-    IPS_SetName(0, $MyInstanceID);
+    //$MyInstanceID = $this->ReadPropertyString("MyInstanceID");
+    echo "Eigene Instanz-ID: " . $this->InstanceID . ", IPS Instanz-ID: " . $MyInstanceID."\n\nDiese Funktion ist leider noch nicht implementiert.";
+    //$this->SendDebug("AUTOCONFIG", "Meine InstanzID: " . $MyInstanceID, 0);
+    //IPS_SetName(0, $MyInstanceID);
   }
 
   /**
@@ -91,6 +90,7 @@ class GIIZWatchdogSlave extends IPSModule {
     } catch (Exception $e) {
       echo 'Exception abgefangen: ', $e->getMessage(), "\n";
       $this->SendDebug("ERROR", $e->getMessage(), 0);
+      echo "Es konnte keine Verbindung zum Watchdog Master aufgebaut werden.\nIst das Master Modul in der Master-Instanz installiert und aktiviert?";
     }
   }
 
