@@ -6,8 +6,13 @@ Misc utilities for monitoring & maintenance of distributed IP-Symcon instances.
 
  Bibliothek | GUID                                 | URL
  -----------|--------------------------------------|-----
- SymconGIIZ | fababece-91ed-11e6-ae22-56b6b6499611 | http://whz-aiis-vm14.zw.fh-zwickau.de/giiz/SymconGIIZ.git
+ SymconGIIZ | fababece-91ed-11e6-ae22-56b6b6499611 | http://euve7535.vserver.de/symcon/SymconWD.git
  
+ 
+ Bibliothek | GUID                                 | URL
+ -----------|--------------------------------------|-----
+ SymconGIIZ | fababece-91ed-11e6-ae22-56b6b6499611 | http://whz-aiis-vm14.zw.fh-zwickau.de/giiz/SymconGIIZ.git
+
  Modulname | Typ | Beschreibung | GUID | Prefix | Name
  ----------|-----|--------------|------|--------------------
  CONFIGURATOR | 0:Kern  | Autokonfiguration einer IP-Symcon-Instanz | 603DB2B9-B619-4342-B442-64852CEFA5D3 | |
