@@ -6,9 +6,11 @@ Misc utilities for monitoring & maintenance of distributed IP-Symcon instances.
 
  Bibliothek | GUID                                 | URL
  -----------|--------------------------------------|-----
- SymconWD | fababece-91ed-11e6-ae22-56b6b6499611 | http://euve7535.vserver.de/symcon/SymconWD.git
+ SymconWD   | fababece-91ed-11e6-ae22-56b6b6499611 | http://euve7535.vserver.de/symcon/SymconWD.git
+ 
  
  BISHER (deprecated)
+ 
  Bibliothek | GUID                                 | URL
  -----------|--------------------------------------|-----
  SymconGIIZ | fababece-91ed-11e6-ae22-56b6b6499611 | http://whz-aiis-vm14.zw.fh-zwickau.de/giiz/SymconGIIZ.git
