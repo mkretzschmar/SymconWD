@@ -17,7 +17,7 @@ Misc utilities for monitoring & maintenance of distributed IP-Symcon instances.
 
 ## Origin Repo
 
-http://euve7535.vserver.de/symcon/SymconWD.git
+http://euve7535.vserver.de/symcon/SymconWD.git (nicht mehr verfügbar)
 
 ## Copy Repos
 
